@@ -1,2 +1,0 @@
-Data Error D:\Google Drive\51-中興測量\Self_IMU\Tunnel_Calculator\給智翔\192.85-192.75-1205.xlsx : row 11873 can't be classify by quadrant, deg=nan.
-Data Error D:\Google Drive\51-中興測量\Self_IMU\Tunnel_Calculator\給智翔\192.85-192.75-1205.xlsx : row 25089 can't be classify by quadrant, deg=nan.

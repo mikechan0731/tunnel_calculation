@@ -2,7 +2,7 @@ missing module named tempfile.TemporaryDirectory - imported by tempfile, setupto
 missing module named thread.interrupt_main - imported by thread, ipykernel.parentpoller
 missing module named thread._local - imported by thread, threading
 missing module named thread.stack_size - imported by thread, threading
-missing module named thread.get_ident - imported by thread, collections, future.backports.misc, pandas.compat.chainmap_impl, requests.packages.urllib3.packages.ordered_dict, singledispatch_helpers, functools32.reprlib32, backports.configparser.helpers
+missing module named thread.get_ident - imported by thread, collections, future.backports.misc, pandas.compat.chainmap_impl, backports.configparser.helpers, requests.packages.urllib3.packages.ordered_dict, singledispatch_helpers, functools32.reprlib32
 missing module named thread.allocate_lock - imported by thread, _strptime, cffi.lock, functools32.functools32
 missing module named fcntl - imported by tempfile, subprocess, backports.shutil_get_terminal_size.get_terminal_size, tornado.platform.posix, zmq.eventloop.minitornado.platform.posix, pandas.util.terminal, oauth2client.locked_file
 missing module named errno.EINVAL - imported by errno, StringIO, pathlib2
@@ -18,12 +18,11 @@ missing module named _struct._clearcache - imported by _struct, struct
 missing module named _hashlib.pbkdf2_hmac - imported by _hashlib, hashlib
 missing module named threading.RLock - imported by threading, _threading_local, multiprocessing.dummy, pytz.lazy, pyparsing, requests.packages.urllib3._collections, pkg_resources._vendor.pyparsing
 missing module named threading.current_thread - imported by threading, _threading_local
-missing module named time.time - imported by time, threading, Queue, xmllib, multiprocessing.synchronize, Cookie, pyglet.window, IPython.core.completerlib
 missing module named itertools.count - imported by itertools, heapq, threading, future.backports.misc, OpenSSL.SSL
 missing module named itertools.zip_longest - imported by itertools, IPython.core.oinspect
 missing module named itertools.izip_longest - imported by itertools, IPython.core.oinspect
 missing module named itertools.cycle - imported by itertools, cycler, pandas.core.reshape
-missing module named itertools.groupby - imported by itertools, pandas.core.config, jinja2.filters, pygments.regexopt, pandas.formats.format
+missing module named itertools.groupby - imported by itertools, pandas.core.config, jinja2.filters, pygments.regexopt
 missing module named itertools.ifilterfalse - imported by itertools, sets
 missing module named itertools.ifilter - imported by itertools, sets, jinja2._compat
 missing module named itertools.product - imported by itertools, pandas.compat, cycler, pandas.formats.style
@@ -35,12 +34,12 @@ missing module named itertools.tee - imported by itertools, heapq
 missing module named itertools.izip - imported by itertools, heapq, scipy.optimize.cobyla, jsonschema.compat, jinja2._compat
 missing module named itertools.chain - imported by itertools, tokenize, heapq, collections, future.backports.misc, decimal, matplotlib, OpenSSL.SSL, IPython.utils._tokenize_py3, IPython.utils._tokenize_py2, zmq.utils.constant_names, IPython.core.magics.code, ipykernel.serialize, nbconvert.exporters.export, jinja2.runtime, jinja2.compiler, pandas.core.groupby
 missing module named collections.deque - imported by collections, shlex, threading, ast, pydoc, Queue, IPython.lib.pretty, jsonschema.exceptions, jinja2.nodes, jinja2.utils, jinja2.lexer, html5lib._tokenizer
-missing module named collections.UserDict - imported by collections, singledispatch_helpers, backports.configparser.helpers
 missing module named collections.Callable - imported by collections, cffi.api
+missing module named collections.UserDict - imported by collections, backports.configparser.helpers, singledispatch_helpers
 missing module named collections.ChainMap - imported by collections, future.backports.misc, pandas.compat.chainmap, backports.configparser.helpers
 missing module named collections._count_elements - imported by collections, future.backports.misc
 missing module named collections.Mapping - imported by collections, future.backports.misc, pytz.lazy, requests.packages.urllib3._collections, requests.sessions, jinja2.runtime, markupsafe, jinja2.tests, html5lib._trie._base
-missing module named collections.MutableMapping - imported by collections, future.backports.misc, pandas.compat.chainmap_impl, pandas.tseries.tools, requests.packages.urllib3._collections, singledispatch_helpers, jsonschema.compat, functools32.functools32, backports.configparser, backports.configparser.helpers, jinja2.utils, pandas.formats.style, html5lib.treebuilders.dom, lxml.html
+missing module named collections.MutableMapping - imported by collections, future.backports.misc, pandas.compat.chainmap_impl, backports.configparser, backports.configparser.helpers, pandas.tseries.tools, requests.packages.urllib3._collections, singledispatch_helpers, jsonschema.compat, functools32.functools32, jinja2.utils, pandas.formats.style, html5lib.treebuilders.dom, lxml.html
 missing module named collections.Sequence - imported by collections, future.types.newrange, pathlib2, jsonschema.compat
 missing module named collections.Iterator - imported by collections, future.types.newrange
 missing module named collections.Iterable - imported by collections, future.types.newbytes, future.types.newstr, matplotlib.font_manager
@@ -101,9 +100,9 @@ missing module named dis.EXTENDED_ARG - imported by dis, setuptools.depends
 missing module named cPickle.loads - imported by cPickle, collections, Cookie, xlsxwriter.compat_collections
 missing module named cPickle.dumps - imported by cPickle, collections, Cookie, xlsxwriter.compat_collections
 missing module named cPickle.PicklingError - imported by cPickle, multiprocessing.managers
-missing module named collections.OrderedDict - imported by collections, unittest.util, future.backports.misc, pandas.compat, ConfigParser, pyparsing, requests.packages.urllib3._collections, enum, requests.compat, IPython.utils._signatures, pyglet.font.fontconfig, singledispatch_helpers, backports.configparser.helpers, html5lib.html5parser, html5lib.treewalkers.etree, html5lib.filters.alphabeticalattributes, pkg_resources._vendor.pyparsing
-missing module named collections.namedtuple - imported by collections, inspect, unittest.util, difflib, doctest, pandas.compat, ssl, urlparse, future.backports.urllib.parse, decimal, pandas.core.config, scipy.stats.stats, scipy.stats.morestats, scipy.stats._binned_statistic, scipy.stats.mstats_basic, requests.packages.urllib3.util.url, backports.shutil_get_terminal_size.get_terminal_size, IPython.utils.tokenutil, functools32.functools32, xlsxwriter.compatibility, pandas.tools.plotting, pandas.msgpack, zmq.utils.garbage
-missing module named operator.itemgetter - imported by operator, collections, heapq, future.backports.misc, numpy.lib.npyio, matplotlib.figure, matplotlib.axes._base, simplejson.encoder, jinja2.lexer, jinja2.filters, pygments.regexopt, xlsxwriter.compat_collections
+missing module named collections.OrderedDict - imported by collections, unittest.util, future.backports.misc, pandas.compat, ConfigParser, backports.configparser.helpers, pyparsing, requests.packages.urllib3._collections, enum, requests.compat, IPython.utils._signatures, pyglet.font.fontconfig, singledispatch_helpers, html5lib.html5parser, html5lib.treewalkers.etree, html5lib.filters.alphabeticalattributes, pkg_resources._vendor.pyparsing
+missing module named collections.namedtuple - imported by collections, inspect, unittest.util, difflib, doctest, pandas.compat, ssl, urlparse, future.backports.urllib.parse, decimal, pandas.core.config, scipy.stats.stats, scipy.stats.morestats, scipy.stats._binned_statistic, scipy.stats.mstats_basic, requests.packages.urllib3.util.url, backports.shutil_get_terminal_size.get_terminal_size, IPython.utils.tokenutil, functools32.functools32, pandas.tools.plotting, xlsxwriter.compatibility, pandas.msgpack, zmq.utils.garbage
+missing module named operator.itemgetter - imported by operator, collections, heapq, future.backports.misc, dateutil.tz.tz, numpy.lib.npyio, matplotlib.figure, matplotlib.axes._base, simplejson.encoder, jinja2.lexer, jinja2.filters, pygments.regexopt, xlsxwriter.compat_collections
 missing module named operator.eq - imported by operator, collections, future.backports.misc
 missing module named operator.getitem - imported by operator, pyasn1.type.tag
 missing module named operator.__ge__ - imported by operator, OpenSSL.crypto
@@ -140,7 +139,7 @@ missing module named math.sin - imported by math, random, matplotlib.backends.ba
 missing module named math.sqrt - imported by math, random, scipy.sparse.linalg.isolve.lsqr, scipy.sparse.linalg.isolve.lsmr, scipy.optimize.cobyla, pandas.tools.plotting
 missing module named math.cos - imported by math, random, matplotlib.backends.backend_agg, matplotlib.backends.backend_pdf
 missing module named math.acos - imported by math, random
-missing module named math.ceil - imported by math, random, future.backports.misc, matplotlib.mathtext, pyglet.image, matplotlib.backends.backend_pdf, scipy.signal.fir_filter_design, pandas.tools.plotting
+missing module named math.ceil - imported by math, random, future.backports.misc, matplotlib.mathtext, pyglet.image, matplotlib.backends.backend_pdf, pandas.tools.plotting, scipy.signal.fir_filter_design
 missing module named math.exp - imported by math, random
 missing module named math.log - imported by math, random, scipy.signal.fir_filter_design
 missing module named math.e - imported by math, random
@@ -150,7 +149,7 @@ missing module named math.floor - imported by math, matplotlib.backends.backend_
 missing module named math.radians - imported by math, matplotlib.backends.backend_agg
 missing module named math.gcd - imported by math, dateutil.rrule
 missing module named math.copysign - imported by math, dateutil.relativedelta
-missing module named warnings.warn - imported by warnings, random, contextlib, plistlib, dateutil.relativedelta, dateutil.rrule, distutils.archive_util, distutils.command.sdist, scipy.sparse.compressed, scipy.sparse.coo, scipy.sparse.bsr, scipy.linalg.decomp_lu, scipy.sparse.linalg.isolve.utils, scipy.sparse.linalg.dsolve.linsolve, scipy.optimize.linesearch, scipy.optimize._minimize, scipy.optimize._root, pandas.core.categorical, pandas.core.algorithms, matplotlib.mathtext, traitlets.traitlets, IPython.utils.io, OpenSSL.crypto, cgi, IPython.paths, IPython.utils.path, jupyter_client.localinterfaces, IPython.core.magics.extension, jinja2.environment, nbconvert.filters.highlight, nbconvert.exporters.slides, IPython.lib.deepreload, IPython.core.builtin_trap, IPython.kernel, pandas.io.excel, xlsxwriter.workbook, xlsxwriter.worksheet, xlsxwriter.shape, xlsxwriter.utility, xlsxwriter.chart, xlsxwriter.chart_bar, xlsxwriter.chart_doughnut, xlsxwriter.chart_pie, xlsxwriter.chart_scatter, pandas.core.generic, pandas.io.stata
+missing module named warnings.warn - imported by warnings, random, contextlib, plistlib, dateutil.relativedelta, dateutil.rrule, distutils.archive_util, distutils.command.sdist, pandas.core.algorithms, scipy.sparse.compressed, scipy.sparse.coo, scipy.sparse.bsr, scipy.linalg.decomp_lu, scipy.sparse.linalg.isolve.utils, scipy.sparse.linalg.dsolve.linsolve, scipy.optimize.linesearch, scipy.optimize._minimize, scipy.optimize._root, pandas.core.categorical, matplotlib.mathtext, traitlets.traitlets, IPython.utils.io, OpenSSL.crypto, cgi, IPython.paths, IPython.utils.path, jupyter_client.localinterfaces, IPython.core.magics.extension, jinja2.environment, nbconvert.filters.highlight, nbconvert.exporters.slides, IPython.lib.deepreload, IPython.core.builtin_trap, IPython.kernel, pandas.io.excel, xlsxwriter.workbook, xlsxwriter.worksheet, xlsxwriter.shape, xlsxwriter.utility, xlsxwriter.chart, xlsxwriter.chart_bar, xlsxwriter.chart_doughnut, xlsxwriter.chart_pie, xlsxwriter.chart_scatter, pandas.io.stata, pandas.core.generic
 missing module named _warnings.warn_explicit - imported by _warnings, warnings
 missing module named _warnings.filters - imported by _warnings, warnings
 missing module named _warnings.once_registry - imported by _warnings, warnings
@@ -179,11 +178,11 @@ missing module named _sysconfigdata.build_time_vars - imported by _sysconfigdata
 missing module named _sysconfigdata - imported by distutils.sysconfig, sysconfig
 missing module named contextlib._GeneratorContextManager - imported by contextlib, decorator
 missing module named datetime.MINYEAR - imported by datetime, pandas.io.excel
-missing module named datetime.tzinfo - imported by datetime, pytz.tzinfo
-missing module named datetime.time - imported by datetime, pandas.tseries.tools, pandas.tseries.index, pandas.tseries.offsets, pandas.io.excel, pandas.io.sql
-missing module named datetime.timedelta - imported by datetime, pandas.core.common, pandas.tseries.tools, pandas.tseries.index, pytz.tzinfo, pytz.tzfile, pandas.tseries.period, pandas.tseries.frequencies, pandas.tseries.offsets, pandas.tseries.base, pandas.tseries.tdi, pandas.core.internals, pandas.tseries.resample, pandas.tseries.converter, pandas.computation.pytables, pandas.io.packers
-missing module named datetime.datetime - imported by datetime, pandas, pandas.core.common, pandas.tseries.tools, pandas.tseries.index, pytz.tzinfo, pytz.tzfile, pyparsing, requests.sessions, jupyter_client.session, jupyter_client.jsonutil, jupyter_client.adapter, ipykernel.kernelbase, ipykernel.jsonutil, jupyter_core.migrate, matplotlib.backends.backend_pdf, pandas.tseries.period, pandas.tseries.offsets, pandas.tseries.base, pandas.core.internals, pandas.io.pytables, pandas.io.excel, xlsxwriter.workbook, xlsxwriter.core, pandas.tseries.converter, pandas.computation.pytables, pandas.computation.ops, pandas.io.packers, pandas.io.sql, pandas.io.gbq, pandas.io.sas.sas_xport, pandas.util.testing, pkg_resources._vendor.pyparsing
-missing module named datetime.date - imported by datetime, _strptime, pandas.tseries.offsets, pandas.core.internals, pandas.io.pytables, pandas.io.excel, pandas.io.packers, pandas.io.sql
+missing module named datetime.time - imported by datetime, pandas.tseries.tools, pandas.tseries.index, pandas.io.excel, pandas.io.sql, pandas.tseries.offsets
+missing module named datetime.datetime - imported by datetime, dateutil.tz._common, pandas, pandas.tseries.offsets, pandas.tseries.tools, pandas.tseries.index, pandas.core.common, pandas.types.cast, pandas.tseries.period, pytz.tzinfo, pytz.tzfile, pandas.tseries.base, pandas.core.internals, pyparsing, requests.sessions, jupyter_client.session, jupyter_client.jsonutil, jupyter_client.adapter, ipykernel.kernelbase, ipykernel.jsonutil, jupyter_core.migrate, matplotlib.backends.backend_pdf, pandas.computation.ops, pandas.tseries.converter, pandas.io.excel, xlsxwriter.workbook, xlsxwriter.core, pandas.io.gbq, pandas.io.pytables, pandas.computation.pytables, pandas.io.packers, pandas.io.sql, pandas.io.sas.sas_xport, pandas.util.testing, pkg_resources._vendor.pyparsing
+missing module named datetime.timedelta - imported by datetime, dateutil.tz._common, pandas.tseries.offsets, pandas.tseries.tools, pandas.tseries.index, pandas.core.common, pandas.types.cast, pandas.tseries.period, pandas.tseries.frequencies, pytz.tzinfo, pytz.tzfile, pandas.tseries.tdi, pandas.tseries.base, pandas.core.internals, pandas.tseries.converter, pandas.tseries.resample, pandas.computation.pytables, pandas.io.packers
+missing module named datetime.tzinfo - imported by datetime, dateutil.tz._common, pytz.tzinfo
+missing module named datetime.date - imported by datetime, _strptime, pandas.tseries.offsets, pandas.core.internals, pandas.io.excel, pandas.io.pytables, pandas.io.packers, pandas.io.sql
 missing module named __builtin__.open - imported by __builtin__, tarfile
 missing module named grp.getgrnam - imported by grp, shutil, distutils.archive_util
 missing module named grp - imported by shutil, tarfile, distutils.archive_util, pathlib2
@@ -391,9 +390,9 @@ missing module named future.utils.native_str - imported by future.utils, future.
 missing module named reprlib.recursive_repr - imported by reprlib, future.backports.misc
 missing module named reprlib.aRepr - imported by reprlib, IPython.core.debugger
 missing module named socket.create_connection - imported by socket, ssl, future.backports.misc
-missing module named _dummy_thread.get_ident - imported by _dummy_thread, future.backports.misc, singledispatch_helpers, backports.configparser.helpers
+missing module named _dummy_thread.get_ident - imported by _dummy_thread, future.backports.misc, backports.configparser.helpers, singledispatch_helpers
 missing module named _dummy_thread.allocate_lock - imported by _dummy_thread, cffi.lock
-missing module named _thread.get_ident - imported by _thread, future.backports.misc, pandas.compat.chainmap_impl, singledispatch_helpers, backports.configparser.helpers
+missing module named _thread.get_ident - imported by _thread, future.backports.misc, pandas.compat.chainmap_impl, backports.configparser.helpers, singledispatch_helpers
 missing module named _thread.interrupt_main - imported by _thread, ipykernel.parentpoller
 missing module named _thread.allocate_lock - imported by _thread, cffi.lock
 missing module named _thread.RLock - imported by _thread, pyparsing, pkg_resources._vendor.pyparsing
@@ -485,8 +484,8 @@ missing module named 'pkg_resources.extern.pyparsing'.Combine - imported by 'pkg
 missing module named 'pkg_resources.extern.pyparsing'.Word - imported by 'pkg_resources.extern.pyparsing', pkg_resources._vendor.packaging.requirements
 missing module named 'pkg_resources.extern.pyparsing'.Regex - imported by 'pkg_resources.extern.pyparsing', pkg_resources._vendor.packaging.requirements
 missing module named 'pkg_resources.extern.pyparsing'.originalTextFor - imported by 'pkg_resources.extern.pyparsing', pkg_resources._vendor.packaging.requirements
-missing module named ordereddict.OrderedDict - imported by ordereddict, pyparsing, singledispatch_helpers, backports.configparser.helpers, html5lib.html5parser, html5lib.treewalkers.etree, html5lib.filters.alphabeticalattributes, pkg_resources._vendor.pyparsing
-missing module named ordereddict - imported by pyparsing, singledispatch_helpers, backports.configparser.helpers, html5lib.html5parser, html5lib.treewalkers.etree, html5lib.filters.alphabeticalattributes, pkg_resources._vendor.pyparsing
+missing module named ordereddict.OrderedDict - imported by ordereddict, backports.configparser.helpers, pyparsing, singledispatch_helpers, html5lib.html5parser, html5lib.treewalkers.etree, html5lib.filters.alphabeticalattributes, pkg_resources._vendor.pyparsing
+missing module named ordereddict - imported by backports.configparser.helpers, pyparsing, singledispatch_helpers, html5lib.html5parser, html5lib.treewalkers.etree, html5lib.filters.alphabeticalattributes, pkg_resources._vendor.pyparsing
 missing module named 'pkg_resources.extern.six.moves'.parse - imported by 'pkg_resources.extern.six.moves', pkg_resources._vendor.packaging.requirements
 missing module named 'com.sun'.win32 - imported by 'com.sun', pkg_resources._vendor.appdirs
 missing module named 'com.sun' - imported by pkg_resources._vendor.appdirs
@@ -557,6 +556,7 @@ missing module named numpy.linalg.LinAlgError - imported by numpy.linalg, scipy.
 missing module named numpy.linalg.lstsq - imported by numpy.linalg, numpy.lib.polynomial
 missing module named numpy.linalg.eigvals - imported by numpy.linalg, numpy.lib.polynomial
 missing module named numpy.testing.nosetester._numpy_tester - imported by numpy.testing.nosetester, numpy.random, numpy.fft, numpy.core, numpy.matrixlib, numpy.linalg, numpy.ma, numpy.lib, numpy.polynomial, numpy.f2py, numpy.distutils
+missing module named numpy.compat.npy_load_module - imported by numpy.compat, numpy._import_tools, numpy.testing.utils, numpy.distutils.misc_util
 missing module named numpy.core.numeric.asanyarray - imported by numpy.core.numeric, numpy.core.fromnumeric, numpy.core._methods, numpy.core.shape_base, numpy.lib.type_check, numpy.lib.function_base, numpy.lib.twodim_base, numpy.matrixlib.defmatrix, numpy.lib.shape_base
 missing module named numpy.core.numeric.array - imported by numpy.core.numeric, numpy.core.fromnumeric, numpy.core.defchararray, numpy.core.getlimits, numpy.lib.type_check, numpy.lib.index_tricks, numpy.lib.function_base, numpy.lib.shape_base
 missing module named numpy.core.numeric.concatenate - imported by numpy.core.numeric, numpy.core.fromnumeric, numpy.lib.function_base, numpy.matrixlib.defmatrix, numpy.lib.shape_base
@@ -669,7 +669,7 @@ missing module named numpy.ma.getmaskarray - imported by numpy.ma, numpy.ma.mrec
 missing module named numpy.ma.masked - imported by numpy.ma, numpy.ma.mrecords, scipy.stats.mstats_basic
 missing module named numpy.ma.MAError - imported by numpy.ma, numpy.ma.mrecords
 missing module named numpy.compat.isfileobj - imported by numpy.compat, numpy.core.records, numpy.lib.format
-missing module named numpy.ndarray - imported by numpy, numpy.ma.core, numpy.ma.extras, numpy.ma.mrecords, numpy.ctypeslib, scipy.stats._distn_infrastructure, scipy.stats.mstats_basic, scipy.stats.mstats_extras, pandas.compat.numpy.function, pandas.core.series, pandas.sparse.array, IPython.core.magics.namespace, pandas.sparse.series, scipy.signal.signaltools
+missing module named numpy.ndarray - imported by numpy, numpy.ma.core, numpy.ma.extras, numpy.ma.mrecords, numpy.ctypeslib, pandas.compat.numpy.function, pandas.core.series, scipy.stats._distn_infrastructure, scipy.stats.mstats_basic, scipy.stats.mstats_extras, IPython.core.magics.namespace, scipy.signal.signaltools
 missing module named numpy.recarray - imported by numpy, numpy.ma.mrecords
 missing module named numpy.array - imported by numpy, numpy.ma.core, numpy.ma.extras, numpy.ma.mrecords, numpy.ctypeslib, scipy.stats.stats, scipy.linalg.decomp, scipy.sparse.linalg.isolve.utils, scipy.misc.common, scipy.misc.pilutil, scipy.optimize.lbfgsb, scipy.optimize.tnc, scipy.optimize.slsqp, scipy.optimize.minpack, scipy.integrate._ode, scipy.stats.morestats, scipy.interpolate.interpolate, scipy.interpolate.fitpack, scipy.interpolate.fitpack2, scipy.signal.bsplines, scipy.signal.ltisys, scipy.signal.filter_design, scipy.signal.signaltools, scipy.ndimage.io
 missing module named numpy.bool_ - imported by numpy, numpy.ma.core, numpy.ma.mrecords
@@ -689,8 +689,8 @@ missing module named 'urllib.request'.urlretrieve - imported by 'urllib.request'
 missing module named 'urllib.request'.parse_http_list - imported by 'urllib.request', requests.compat
 missing module named 'urllib.request'.proxy_bypass - imported by 'urllib.request', requests.compat
 missing module named 'urllib.request'.getproxies - imported by 'urllib.request', requests.compat
-missing module named 'urllib.parse'.urlparse - imported by 'urllib.parse', numpy.lib._datasource, requests.compat, notebook.nbextensions, notebook.utils, IPython.core.extensions, tornado.websocket, pandas.io.common
-missing module named 'urllib.parse' - imported by numpy.lib._datasource, setuptools.py26compat, setuptools.package_index, pathlib2, requests.packages.urllib3.request, requests.packages.urllib3.poolmanager, requests.compat, tornado.escape, jsonschema.compat, IPython.lib.display, notebook.nbextensions, tornado.httputil, tornado.web, notebook.utils, jinja2._compat, nbconvert.filters.strings, tornado.simple_httpclient, IPython.core.extensions, tornado.websocket, pandas.io.common, uritemplate, lxml.html
+missing module named 'urllib.parse'.urlparse - imported by 'urllib.parse', numpy.lib._datasource, requests.compat, notebook.nbextensions, notebook.utils, IPython.core.extensions, tornado.websocket, pandas.io.common, pandas.io.s3
+missing module named 'urllib.parse' - imported by numpy.lib._datasource, setuptools.py26compat, setuptools.package_index, pathlib2, requests.packages.urllib3.request, requests.packages.urllib3.poolmanager, requests.compat, tornado.escape, jsonschema.compat, IPython.lib.display, notebook.nbextensions, tornado.httputil, tornado.web, notebook.utils, jinja2._compat, nbconvert.filters.strings, tornado.simple_httpclient, IPython.core.extensions, tornado.websocket, pandas.io.common, pandas.io.s3, uritemplate, lxml.html
 missing module named 'urllib.parse'.uses_params - imported by 'urllib.parse', pandas.io.common
 missing module named 'urllib.parse'.uses_relative - imported by 'urllib.parse', pandas.io.common
 missing module named 'urllib.parse'.uses_netloc - imported by 'urllib.parse', pandas.io.common
@@ -850,7 +850,7 @@ missing module named numpy.atleast_1d - imported by numpy, scipy.special.basic, 
 missing module named numpy.sinc - imported by numpy, scipy.special.basic
 missing module named numpy.sqrt - imported by numpy, scipy.special.basic, scipy.special.orthogonal, scipy.linalg.matfuncs, scipy.sparse.linalg.isolve.minres, scipy.optimize.optimize, scipy.optimize.slsqp, scipy.optimize.zeros, scipy.stats._distn_infrastructure, scipy.stats._continuous_distns, scipy.stats._discrete_distns, scipy.stats.morestats, scipy.stats.kde, scipy.interpolate.fitpack, scipy.signal.waveforms, scipy.signal.filter_design
 missing module named numpy.inexact - imported by numpy, scipy.special.basic, scipy.linalg.decomp, scipy.optimize.minpack
-missing module named numpy.nan - imported by numpy, scipy.special.basic, scipy.stats._distn_infrastructure, scipy.stats._continuous_distns, pandas.core.series, pandas.sparse.array, pandas.sparse.series, pandas.core.frame, pandas.sparse.frame, scipy.signal.waveforms
+missing module named numpy.nan - imported by numpy, pandas.core.series, scipy.special.basic, scipy.stats._distn_infrastructure, scipy.stats._continuous_distns, pandas.core.frame, pandas.sparse.frame, scipy.signal.waveforms
 missing module named numpy.less - imported by numpy, scipy.special.basic
 missing module named numpy.imag - imported by numpy, scipy.special.basic, scipy.integrate._ode
 missing module named numpy.mgrid - imported by numpy, scipy.special.basic, scipy.optimize.optimize
@@ -1277,10 +1277,9 @@ missing module named cryptography.hazmat.bindings._openssl.lib - imported by cry
 missing module named cryptography.hazmat.bindings._openssl.ffi - imported by cryptography.hazmat.bindings._openssl, cryptography.hazmat.bindings.openssl.binding, cryptography.hazmat.backends.openssl.backend
 missing module named 'six.moves.urllib_parse' - imported by 'six.moves.urllib_parse'
 missing module named six.moves.input - imported by six.moves, oauth2client.tools
-missing module named six.moves.range - imported by six.moves, googleapiclient.http
-missing module named 'six.moves.urllib' - imported by 'six.moves.urllib'
 missing module named six.moves.zip - imported by six.moves, cycler, googleapiclient.discovery
 missing module named six.moves.reduce - imported by six.moves, cycler
+missing module named six.moves.range - imported by six.moves, dateutil.rrule, googleapiclient.http
 missing module named _cffi_backend._get_common_types - imported by _cffi_backend, cffi.commontypes
 missing module named 'ndg.httpsclient'.SubjectAltName - imported by 'ndg.httpsclient', requests.packages.urllib3.contrib.pyopenssl
 missing module named 'ndg.httpsclient' - imported by requests.packages.urllib3.contrib.pyopenssl
@@ -1355,11 +1354,13 @@ missing module named cffi.__version__ - imported by cffi, cffi.api
 missing module named cffi._pycparser - imported by cffi, cffi.cparser
 missing module named testing.udir - imported by testing, cffi.recompiler
 missing module named testing - imported by cffi.recompiler
-missing module named setuptools.extern.six - imported by setuptools.extern, setuptools.monkey, setuptools.dist, setuptools.depends, setuptools.command.easy_install, setuptools.sandbox, setuptools.package_index, setuptools.command.egg_info, setuptools.command.sdist, setuptools.command.bdist_egg, setuptools.unicode_utils, setuptools.command.develop
+missing module named setuptools.extern.six - imported by setuptools.extern, setuptools.monkey, setuptools.dist, setuptools.depends, setuptools.command.easy_install, setuptools.sandbox, setuptools.package_index, setuptools.command.egg_info, setuptools.command.sdist, setuptools.command.bdist_egg, setuptools.unicode_utils, setuptools.glob, setuptools.command.develop
+missing module named setuptools.extern.six.binary_type - imported by setuptools.extern.six, setuptools.glob
 missing module named setuptools.dist.Distribution - imported by setuptools.dist, setuptools.command.easy_install, setuptools
 missing module named os.chmod - imported by os, setuptools.command.easy_install
 missing module named setuptools_svn.svn_utils - imported by setuptools_svn, setuptools.command.egg_info
 missing module named setuptools_svn - imported by setuptools.command.egg_info
+missing module named 'setuptools.extern.six.moves'.filter - imported by 'setuptools.extern.six.moves', setuptools.command.py36compat
 missing module named 'setuptools.extern.six.moves'.urllib - imported by 'setuptools.extern.six.moves', setuptools.package_index, setuptools.ssl_support
 missing module named 'setuptools.extern.six.moves'.http_client - imported by 'setuptools.extern.six.moves', setuptools.package_index, setuptools.ssl_support
 missing module named setuptools.command.easy_install.samefile - imported by setuptools.command.easy_install, setuptools.package_index
@@ -1368,7 +1369,7 @@ missing module named setuptools.sandbox.UnpickleableException - imported by setu
 missing module named 'setuptools.extern.six.moves'.builtins - imported by 'setuptools.extern.six.moves', setuptools.sandbox
 missing module named 'setuptools.extern.six.moves'.configparser - imported by 'setuptools.extern.six.moves', setuptools.command.easy_install, setuptools.command.setopt, setuptools.package_index
 missing module named 'setuptools.extern.six.moves'.map - imported by 'setuptools.extern.six.moves', setuptools.dist, setuptools.command.easy_install, setuptools.sandbox, setuptools.package_index, setuptools.ssl_support, setuptools.command.egg_info
-missing module named 'setuptools.extern.six.moves' - imported by setuptools.dist, setuptools.command.easy_install, setuptools.sandbox, setuptools.command.setopt, setuptools.package_index, setuptools.ssl_support, setuptools.command.egg_info
+missing module named 'setuptools.extern.six.moves' - imported by setuptools.dist, setuptools.command.easy_install, setuptools.sandbox, setuptools.command.setopt, setuptools.package_index, setuptools.ssl_support, setuptools.command.egg_info, setuptools.command.py36compat
 missing module named setuptools.setup - imported by setuptools, setuptools.command.easy_install, numpy.distutils.core
 missing module named wincertstore.CertFile - imported by wincertstore, setuptools.ssl_support
 missing module named wincertstore - imported by setuptools.ssl_support
@@ -1419,7 +1420,6 @@ missing module named pygments.lexers.PythonLexer - imported by pygments.lexers, 
 missing module named pygments.lexers.Python3Lexer - imported by pygments.lexers, IPython.lib.lexers
 missing module named pygments.lexers.BashLexer - imported by pygments.lexers, IPython.lib.lexers
 missing module named ctags - imported by pygments.formatters.html
-missing module named colorama - imported by pygments.cmdline
 missing module named pygments.__version__ - imported by pygments, pygments.cmdline
 missing module named pygments.highlight - imported by pygments, pygments.cmdline, nbconvert.filters.highlight, nbconvert.filters.markdown_mistune
 missing module named nbconvert.exporters.export.exporter_map - imported by nbconvert.exporters.export, nbconvert.exporters.script
@@ -1448,8 +1448,6 @@ missing module named 'jinja2.debugrenderer' - imported by jinja2.debug
 missing module named __pypy__.tproxy - imported by __pypy__, jinja2.debug
 missing module named __pypy__ - imported by jinja2.debug
 missing module named jinja2.nodes.Node - imported by jinja2.nodes, jinja2.visitor
-missing module named configparser.RawConfigParser - imported by configparser, numpy.distutils.system_info, numpy.distutils.npy_pkg_config
-missing module named configparser.NoOptionError - imported by configparser, numpy.distutils.system_info, numpy.distutils.npy_pkg_config
 missing module named html.parser.HTMLParser - imported by html.parser, nbconvert.filters.citation
 missing module named html.parser.tagfind - imported by html.parser, bs4.builder._htmlparser
 missing module named html.parser.attrfind - imported by html.parser, bs4.builder._htmlparser
@@ -1579,7 +1577,8 @@ missing module named matplotlib.rc_params_from_file - imported by matplotlib, ma
 missing module named matplotlib.use - imported by matplotlib, matplotlib.testing
 missing module named matplotlib.rcdefaults - imported by matplotlib, matplotlib.testing
 missing module named mock - imported by matplotlib
-missing module named time.sleep - imported by time, threading, bsddb.dbutils, multiprocessing.synchronize, pandas.io.gbq, C:\Users\pc688\Desktop\forTR\forTR_ver3.py
+missing module named time.time - imported by time, threading, Queue, xmllib, multiprocessing.synchronize, Cookie, pyglet.window, IPython.core.completerlib, D:\Google Drive\51-い砍代秖\Self_IMU\Tunnel_Calculator\forTR_ver3.py
+missing module named time.sleep - imported by time, threading, bsddb.dbutils, multiprocessing.synchronize, pandas.io.gbq, D:\Google Drive\51-い砍代秖\Self_IMU\Tunnel_Calculator\forTR_ver3.py
 missing module named riscosenviron._Environ - imported by riscosenviron, os
 missing module named riscosenviron - imported by os
 missing module named riscospath - imported by os
@@ -1597,12 +1596,11 @@ missing module named elementtree - imported by xlrd.xlsx
 missing module named lxml.etree.XMLSyntaxError - imported by lxml.etree, pandas.io.html
 missing module named cElementTree - imported by xlrd.xlsx
 missing module named xlrd.biffh.fprintf - imported by xlrd.biffh, xlrd.formatting
-missing module named numpy.pi - imported by numpy, scipy.special.basic, scipy.special.orthogonal, scipy.stats._continuous_distns, scipy.stats.morestats, scipy.stats.kde, scipy.signal.waveforms, scipy.signal.bsplines, scipy.signal.filter_design, scipy.fftpack.pseudo_diffs, scipy.signal.signaltools, C:\Users\pc688\Desktop\forTR\forTR_ver3.py
-missing module named numpy.linspace - imported by numpy, scipy.signal.ltisys, C:\Users\pc688\Desktop\forTR\forTR_ver3.py
-missing module named numpy.arctan - imported by numpy, scipy.stats._continuous_distns, scipy.signal.filter_design, C:\Users\pc688\Desktop\forTR\forTR_ver3.py
-missing module named numpy.deg2rad - imported by numpy, C:\Users\pc688\Desktop\forTR\forTR_ver3.py
-missing module named numpy.rad2deg - imported by numpy, C:\Users\pc688\Desktop\forTR\forTR_ver3.py
-missing module named numpy.bincount - imported by numpy, pandas.core.categorical
+missing module named numpy.pi - imported by numpy, scipy.special.basic, scipy.special.orthogonal, scipy.stats._continuous_distns, scipy.stats.morestats, scipy.stats.kde, scipy.signal.waveforms, scipy.signal.bsplines, scipy.signal.filter_design, scipy.fftpack.pseudo_diffs, scipy.signal.signaltools, D:\Google Drive\51-い砍代秖\Self_IMU\Tunnel_Calculator\forTR_ver3.py
+missing module named numpy.linspace - imported by numpy, scipy.signal.ltisys, D:\Google Drive\51-い砍代秖\Self_IMU\Tunnel_Calculator\forTR_ver3.py
+missing module named numpy.arctan - imported by numpy, scipy.stats._continuous_distns, scipy.signal.filter_design, D:\Google Drive\51-い砍代秖\Self_IMU\Tunnel_Calculator\forTR_ver3.py
+missing module named numpy.deg2rad - imported by numpy, D:\Google Drive\51-い砍代秖\Self_IMU\Tunnel_Calculator\forTR_ver3.py
+missing module named numpy.rad2deg - imported by numpy, D:\Google Drive\51-い砍代秖\Self_IMU\Tunnel_Calculator\forTR_ver3.py
 missing module named numpy.mean - imported by numpy, scipy.signal.signaltools
 missing module named numpy.polyadd - imported by numpy, scipy.signal.signaltools
 missing module named numpy.polydiv - imported by numpy, scipy.signal.signaltools
@@ -1627,7 +1625,7 @@ missing module named numpy.zeros_like - imported by numpy, scipy.signal.bsplines
 missing module named numpy.piecewise - imported by numpy, scipy.signal.bsplines
 missing module named numpy.mod - imported by numpy, scipy.signal.waveforms
 missing module named numpy.polyint - imported by numpy, scipy.signal.waveforms
-missing module named numpy.percentile - imported by numpy, pandas.core.internals
+missing module named numpy.bincount - imported by numpy, pandas.core.categorical
 missing module named numpy.float_ - imported by numpy, scipy.stats.mstats_extras
 missing module named numpy.int_ - imported by numpy, scipy.stats.mstats_extras
 missing module named numpy.power - imported by numpy, scipy.stats.kde
@@ -1720,8 +1718,8 @@ missing module named lzma - imported by pandas.compat
 missing module named pandas.__version__ - imported by pandas, pandas.util.nosetester
 missing module named pudb - imported by pandas.util.testing
 missing module named bottleneck - imported by pandas.core.nanops, pandas.util.testing
-missing module named 'py.path'.local - imported by 'py.path', pandas.util.testing
-missing module named 'py.path' - imported by pandas.util.testing
+missing module named 'py.path'.local - imported by 'py.path', pandas.io.common, pandas.util.testing
+missing module named 'py.path' - imported by pandas.io.common, pandas.util.testing
 missing module named xarray - imported by pandas.core.generic, pandas.util.testing
 missing module named scipy.stats.t - imported by scipy.stats, pandas.stats.ols
 missing module named scipy.stats.f - imported by scipy.stats, pandas.stats.math, pandas.stats.ols
@@ -1734,58 +1732,38 @@ missing module named scipy.stats.distributions.binom - imported by scipy.stats.d
 missing module named scipy.stats.distributions.beta - imported by scipy.stats.distributions, scipy.stats.mstats_extras
 missing module named scipy.stats._rank.tiecorrect - imported by scipy.stats._rank, scipy.stats.stats
 missing module named scipy.stats._rank.rankdata - imported by scipy.stats._rank, scipy.stats.stats
-missing module named oauth2client.service_account.ServiceAccountCredentials - imported by oauth2client.service_account, pandas.io.gbq
-missing module named oauth2client.client.AssertionCredentials - imported by oauth2client.client, oauth2client.service_account, oauth2client.appengine, oauth2client.gce
-missing module named 'Crypto.Util'.DerSequence - imported by 'Crypto.Util', oauth2client._pycrypto_crypt
-missing module named 'Crypto.Util' - imported by oauth2client._pycrypto_crypt
-missing module named 'Crypto.Signature'.PKCS1_v1_5 - imported by 'Crypto.Signature', oauth2client._pycrypto_crypt
-missing module named 'Crypto.Signature' - imported by oauth2client._pycrypto_crypt
-missing module named 'Crypto.Hash'.SHA256 - imported by 'Crypto.Hash', oauth2client._pycrypto_crypt
-missing module named 'Crypto.Hash' - imported by oauth2client._pycrypto_crypt
-missing module named Crypto.RSA - imported by Crypto, oauth2client._pycrypto_crypt
-missing module named Crypto - imported by oauth2client._pycrypto_crypt
-missing module named psyco - imported by rsa.transform
-missing module named oauth2client.client.Storage - imported by oauth2client.client, oauth2client.appengine, oauth2client.file
-missing module named oauth2client.client.Credentials - imported by oauth2client.client, oauth2client.appengine, oauth2client.file
-missing module named oauth2client.client.OAuth2WebServerFlow - imported by oauth2client.client, oauth2client.appengine, pandas.io.gbq
-missing module named oauth2client.client.AccessTokenRefreshError - imported by oauth2client.client, oauth2client.appengine, pandas.io.gbq
-missing module named oauth2client.client.HttpAccessTokenRefreshError - imported by oauth2client.client, oauth2client.gce
-missing module named 'google.appengine'.ndb - imported by 'google.appengine', oauth2client.appengine
-missing module named 'google.appengine'.login_required - imported by 'google.appengine', oauth2client.appengine
-missing module named 'google.appengine'.db - imported by 'google.appengine', oauth2client.appengine
-missing module named 'google.appengine'.users - imported by 'google.appengine', oauth2client.appengine
-missing module named 'google.appengine'.memcache - imported by 'google.appengine', oauth2client.appengine, googleapiclient.discovery_cache, googleapiclient.discovery_cache.appengine_memcache
-missing module named 'google.appengine'.app_identity - imported by 'google.appengine', oauth2client.appengine
-missing module named webapp2 - imported by oauth2client.appengine
-missing module named oauth2client.client.Flow - imported by oauth2client.client, oauth2client.appengine
-missing module named 'google.appengine' - imported by httplib2, oauth2client.client, oauth2client.appengine, googleapiclient.discovery_cache, googleapiclient.discovery_cache.appengine_memcache
-missing module named 'google.appengine'.InvalidURLError - imported by 'google.appengine', httplib2
-missing module named 'google.appengine'.fetch - imported by 'google.appengine', httplib2
-missing module named 'apiclient.errors'.HttpError - imported by 'apiclient.errors', pandas.io.gbq
-missing module named 'apiclient.errors' - imported by pandas.io.gbq
-missing module named 'apiclient.discovery'.build - imported by 'apiclient.discovery', pandas.io.gbq
-missing module named 'apiclient.discovery' - imported by pandas.io.gbq
-missing module named 'google3.apphosting'.InvalidURLError - imported by 'google3.apphosting', httplib2
-missing module named 'google3.apphosting'.fetch - imported by 'google3.apphosting', httplib2
-missing module named 'google3.apphosting' - imported by httplib2
-missing module named google3.apiproxy_stub_map - imported by google3, httplib2
-missing module named google3 - imported by httplib2
-missing module named google.apiproxy_stub_map - imported by google, httplib2
-missing module named google - imported by httplib2
-missing module named ca_certs_locater - imported by httplib2
-missing module named 'email.FeedParser' - imported by httplib2
-missing module named pandas.core.common.PandasError - imported by pandas.core.common, pandas.core.frame, pandas.core.panel, pandas.io.gbq
-missing module named pandas.core.series.Series - imported by pandas.core.series, pandas.sparse.series, pandas.core.groupby, pandas.core.panel, pandas.sparse.frame, pandas.core.api, pandas.core.reshape, pandas.tools.plotting, pandas.tseries.converter, pandas.core.frame, pandas.io.stata, pandas.sparse.scipy_sparse, pandas.types.concat, pandas.core.strings, pandas.indexes.numeric, pandas.indexes.multi, pandas.core.algorithms, pandas.core.categorical, pandas.tools.merge, pandas.tseries.tools, pandas.stats.plm
+missing module named pandas.core.series.Series - imported by pandas.core.series, pandas.core.categorical, pandas.core.frame, pandas.tools.plotting, pandas.tseries.converter, pandas.core.panel, pandas.core.groupby, pandas.core.api, pandas.core.reshape, pandas.sparse.series, pandas.sparse.scipy_sparse, pandas.sparse.frame, pandas.io.stata, pandas.core.strings, pandas.core.algorithms, pandas.types.concat, pandas.tseries.tools, pandas.stats.plm
 missing module named pandas.hashtable.unique_label_indices - imported by pandas.hashtable, pandas.core.groupby
-missing module named pandas.core.common._isnull_ndarraylike - imported by pandas.core.common, pandas.core.groupby
+missing module named pandas.types.missing._isnull_ndarraylike - imported by pandas.types.missing, pandas.core.groupby
 missing module named pandas.lib.count_level_2d - imported by pandas.lib, pandas.core.groupby
 missing module named pandas.core.index._all_indexes_same - imported by pandas.core.index, pandas.core.groupby, pandas.tools.merge
 missing module named pandas.tools.merge._get_join_indexers - imported by pandas.tools.merge, pandas.core.groupby, pandas.indexes.base
-missing module named pandas.core.groupby.decons_obs_group_ids - imported by pandas.core.groupby, pandas.core.reshape
-missing module named pandas.core.groupby._compress_group_index - imported by pandas.core.groupby, pandas.core.reshape
-missing module named pandas.core.groupby.get_group_index - imported by pandas.core.groupby, pandas.core.reshape, pandas.core.frame, pandas.indexes.multi
-missing module named pandas.core.groupby.groupby - imported by pandas.core.groupby, pandas.core.api, pandas.tseries.resample, pandas.core.generic
-missing module named pandas.core.groupby.Grouper - imported by pandas.core.groupby, pandas.core.api, pandas.tseries.resample, pandas.tools.pivot
+missing module named pandas.tseries.offsets.Second - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.YearBegin - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.BMonthBegin - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.MonthBegin - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.BYearBegin - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.Micro - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.BYearEnd - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.BMonthEnd - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.BQuarterEnd - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.Hour - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.BQuarterBegin - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.QuarterBegin - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.Minute - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.Day - imported by pandas.tseries.offsets, pandas.tseries.frequencies, pandas.tseries.resample
+missing module named pandas.tseries.offsets.QuarterEnd - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.MonthEnd - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.CDay - imported by pandas.tseries.offsets, pandas.tseries.frequencies, pandas.tseries.index
+missing module named pandas.tseries.offsets.prefix_mapping - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.Week - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.Milli - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.YearEnd - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.BDay - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tseries.offsets.Nano - imported by pandas.tseries.offsets, pandas.tseries.frequencies
+missing module named pandas.tslib.Timedelta - imported by pandas.tslib, pandas.tseries.frequencies, pandas.core.internals, pandas.tseries.offsets, pandas.formats.format
+missing module named pandas.core.algorithms.unique - imported by pandas.core.algorithms, pandas.tseries.frequencies, pandas.core.api, pandas.io.pytables
+missing module named pandas.types.common.is_period_arraylike - imported by pandas.types.common, pandas.core.algorithms, pandas.tseries.frequencies, pandas.tseries.converter, pandas.tseries.common, pandas.formats.format
 missing module named scipy.signal._spectral.lombscargle - imported by scipy.signal._spectral, scipy.signal.spectral
 missing module named scipy.fftpack.ifftn - imported by scipy.fftpack, scipy.signal.signaltools
 missing module named scipy.fftpack.fftn - imported by scipy.fftpack, scipy.signal.signaltools
@@ -1802,29 +1780,28 @@ missing module named scipy.signal.spline.sepfir2d - imported by scipy.signal.spl
 missing module named scipy.signal._max_len_seq.max_len_seq - imported by scipy.signal._max_len_seq, scipy.signal
 missing module named pandas.core.base.GroupByMixin - imported by pandas.core.base, pandas.tseries.resample, pandas.core.window
 missing module named pandas.lib.isscalar - imported by pandas.lib, pandas.core.ops, pandas.core.window
-missing module named pandas.tseries.resample.get_resampler_for_grouping - imported by pandas.tseries.resample, pandas.core.groupby
-missing module named pandas.tseries.resample.TimeGrouper - imported by pandas.tseries.resample, pandas.core.groupby, pandas.tseries.api
-missing module named pandas.core.generic._shared_docs - imported by pandas.core.generic, pandas.core.panel, pandas.tools.plotting, pandas.tseries.resample, pandas.core.frame
-missing module named pandas.tseries.index.date_range - imported by pandas.tseries.index, pandas.tseries.api, pandas.core.api, pandas.tseries.converter, pandas.tseries.resample
-missing module named pandas.tseries.frequencies.to_offset - imported by pandas.tseries.frequencies, pandas.tseries.offsets, pandas.tseries.base, pandas.tseries.tdi, pandas.tseries.resample, pandas.core.generic, pandas.tseries.index
-missing module named pandas.tslib.Timedelta - imported by pandas.tslib, pandas.tseries.offsets, pandas.tseries.frequencies, pandas.formats.format, pandas.core.internals
-missing module named pandas.tseries.frequencies.get_offset - imported by pandas.tseries.frequencies, pandas.tseries.offsets
-missing module named pandas.tseries.frequencies.get_freq_code - imported by pandas.tseries.frequencies, pandas.tseries.offsets, pandas.tseries.period
-missing module named pandas.core.algorithms.unique - imported by pandas.core.algorithms, pandas.tseries.frequencies, pandas.core.api, pandas.io.pytables
+missing module named pandas.core.generic._shared_docs - imported by pandas.core.generic, pandas.core.frame, pandas.tools.plotting, pandas.core.panel, pandas.tseries.resample
+missing module named pandas._period.IncompatibleFrequency - imported by pandas._period, pandas.tseries.period, pandas.tseries.resample, pandas.tseries.common
+missing module named pandas._period.get_period_field_arr - imported by pandas._period, pandas.tseries.period
+missing module named pandas._period.Period - imported by pandas._period, pandas.tseries.period
+missing module named pandas._period._quarter_to_myear - imported by pandas._period, pandas.tseries.period
+missing module named pandas._period._validate_end_alias - imported by pandas._period, pandas.tseries.period
+missing module named pandas.tseries.offsets._delta_to_nanoseconds - imported by pandas.tseries.offsets, pandas.tseries.resample
+missing module named pandas.tseries.offsets.Tick - imported by pandas.tseries.offsets, pandas.tseries.tdi, pandas.tseries.resample, pandas.tseries.index
+missing module named pandas.tseries.index.date_range - imported by pandas.tseries.index, pandas.tseries.converter, pandas.tseries.resample, pandas.core.api, pandas.tseries.api
 missing module named pandas.core.base.AbstractMethodError - imported by pandas.core.base, pandas.tseries.resample
-missing module named pandas.algos.groupsort_indexer - imported by pandas.algos, pandas.indexes.base
+missing module named pandas.core.groupby.decons_obs_group_ids - imported by pandas.core.groupby, pandas.core.reshape
+missing module named pandas.core.groupby._compress_group_index - imported by pandas.core.groupby, pandas.core.reshape
+missing module named pandas.core.groupby.get_group_index - imported by pandas.core.groupby, pandas.core.reshape, pandas.core.frame, pandas.indexes.multi
+missing module named pandas.core.groupby.groupby - imported by pandas.core.groupby, pandas.tseries.resample, pandas.core.api, pandas.core.generic
+missing module named pandas.core.groupby.PanelGroupBy - imported by pandas.core.groupby, pandas.tseries.resample, pandas.core.panel
+missing module named pandas.core.groupby._GroupBy - imported by pandas.core.groupby, pandas.tseries.resample
+missing module named pandas.core.groupby.BinGrouper - imported by pandas.core.groupby, pandas.tseries.resample
+missing module named pandas.core.groupby.Grouper - imported by pandas.core.groupby, pandas.tseries.resample, pandas.core.api, pandas.tools.pivot
+missing module named pandas.core.groupby.SeriesGroupBy - imported by pandas.core.groupby, pandas.tseries.resample
 missing module named pandas.lib.Timestamp - imported by pandas.lib, pandas.indexes.base, pandas.core.groupby, pandas.tseries.resample, pandas.indexes.multi, pandas.tseries.index
-missing module named pandas.core.config.option_context - imported by pandas.core.config, pandas.core.groupby, pandas.core.api
-missing module named pandas.core.common.is_bool_dtype - imported by pandas.core.common, pandas.core.nanops, pandas.core.ops, pandas.tseries.base, pandas.core.groupby, pandas.indexes.base, pandas.core.strings
-missing module named pandas.core.common.is_timedelta64_dtype - imported by pandas.core.common, pandas.tseries.timedeltas, pandas.core.nanops, pandas.core.ops, pandas.core.internals, pandas.core.groupby, pandas.tseries.common
-missing module named pandas.core.common.is_numeric_dtype - imported by pandas.core.common, pandas.core.groupby
-missing module named pandas.core.common.is_bool - imported by pandas.core.common, pandas.util.validators, pandas.core.groupby, pandas.core.categorical
-missing module named pandas.core.common._maybe_fill - imported by pandas.core.common, pandas.core.groupby
-missing module named pandas.core.common._DATELIKE_DTYPES - imported by pandas.core.common, pandas.core.groupby
-missing module named pandas.core.common._possibly_downcast_to_dtype - imported by pandas.core.common, pandas.core.internals, pandas.core.groupby
-missing module named pandas.core.common.is_datetime_or_timedelta_dtype - imported by pandas.core.common, pandas.core.nanops, pandas.core.groupby
-missing module named pandas.core.common.is_datetime64_dtype - imported by pandas.core.common, pandas.core.nanops, pandas.core.ops, pandas.core.internals, pandas.core.groupby, pandas.tseries.common, pandas.tseries.index
-missing module named pandas.core.panel.Panel - imported by pandas.core.panel, pandas.sparse.panel, pandas.core.groupby, pandas.core.api, pandas.core.panel4d, pandas.core.frame, pandas.stats.ols, pandas.stats.plm
+missing module named pandas.core.panel.Panel - imported by pandas.core.panel, pandas.core.groupby, pandas.core.api, pandas.core.panel4d, pandas.core.frame, pandas.stats.ols, pandas.stats.plm
+missing module named pandas.core.panel.WidePanel - imported by pandas.core.panel, pandas.core.api
 missing module named xlwt - imported by pandas.io.excel
 missing module named 'openpyxl.styles'.Protection - imported by 'openpyxl.styles', pandas.io.excel
 missing module named 'openpyxl.styles'.NumberFormat - imported by 'openpyxl.styles', pandas.io.excel
@@ -1843,163 +1820,199 @@ missing module named 'openpyxl.cell' - imported by pandas.io.excel
 missing module named 'openpyxl.workbook'.Workbook - imported by 'openpyxl.workbook', pandas.io.excel
 missing module named 'openpyxl.workbook' - imported by pandas.io.excel
 missing module named openpyxl - imported by pandas.compat.openpyxl_compat, pandas.io.excel
-missing module named pandas.core.panel._get_combined_index - imported by pandas.core.panel, pandas.sparse.panel
+missing module named pandas.core.internals.create_block_manager_from_blocks - imported by pandas.core.internals, pandas.core.frame, pandas.core.panel
+missing module named pandas.core.internals.create_block_manager_from_arrays - imported by pandas.core.internals, pandas.core.frame, pandas.core.panel, pandas.sparse.frame
+missing module named pandas.core.indexing.maybe_droplevels - imported by pandas.core.indexing, pandas.core.frame, pandas.core.panel, pandas.indexes.multi
 missing module named pandas.core.index._get_combined_index - imported by pandas.core.index, pandas.core.panel, pandas.core.frame, pandas.tools.merge
-missing module named pandas.core.groupby.PanelGroupBy - imported by pandas.core.groupby, pandas.core.panel, pandas.tseries.resample
+missing module named pandas.core.common.PandasError - imported by pandas.core.common, pandas.core.frame, pandas.core.panel, pandas.io.gbq
+missing module named pandas.types.common.is_numeric_v_string_like - imported by pandas.types.common, pandas.core.internals, pandas.core.missing
+missing module named pandas.types.common.is_string_like - imported by pandas.types.common, pandas.core.panel, pandas.formats.style, pandas.core.strings
+missing module named pandas.core.internals.BlockManager - imported by pandas.core.internals, pandas.core.frame, pandas.core.panel, pandas.core.groupby, pandas.sparse.frame, pandas.core.reshape, pandas.core.generic, pandas.io.pytables, pandas.io.packers
 missing module named pandas.core.internals.make_block - imported by pandas.core.internals, pandas.core.groupby, pandas.core.reshape, pandas.io.pytables, pandas.io.packers
-missing module named pandas.core.index.CategoricalIndex - imported by pandas.core.index, pandas.core.groupby, pandas.core.api, pandas.core.categorical
-missing module named pandas.core.generic.NDFrame - imported by pandas.core.generic, pandas.core.indexing, pandas.core.groupby, pandas.core.panel, pandas.sparse.frame, pandas.io.packers, pandas.core.frame, pandas.tools.merge
-missing module named pandas.core.base.PandasObject - imported by pandas.core.base, pandas.indexes.base, pandas.sparse.array, pandas.sparse.list, pandas.core.generic, pandas.formats.format, pandas.core.internals, pandas.core.groupby, pandas.core.window, pandas.tools.plotting, pandas.io.sql, pandas.core.categorical
+missing module named pandas.core.index.CategoricalIndex - imported by pandas.core.index, pandas.core.categorical, pandas.core.groupby, pandas.core.api
+missing module named pandas.core.generic.NDFrame - imported by pandas.core.generic, pandas.core.frame, pandas.core.panel, pandas.core.groupby, pandas.tools.merge, pandas.io.packers, pandas.core.indexing
+missing module named pandas.core.base.PandasObject - imported by pandas.core.base, pandas.indexes.base, pandas.core.generic, pandas.core.internals, pandas.core.categorical, pandas.tools.plotting, pandas.core.groupby, pandas.sparse.array, pandas.sparse.list, pandas.core.window, pandas.io.sql, pandas.formats.format
 missing module named pandas.core.base.GroupByError - imported by pandas.core.base, pandas.core.groupby
 missing module named pandas.core.base.SelectionMixin - imported by pandas.core.base, pandas.core.groupby, pandas.core.window
 missing module named pandas.core.base.DataError - imported by pandas.core.base, pandas.core.groupby
 missing module named pandas.core.base.SpecificationError - imported by pandas.core.base, pandas.core.groupby
+missing module named pandas.types.missing._maybe_fill - imported by pandas.types.missing, pandas.core.groupby
+missing module named pandas.types.common.is_bool_dtype - imported by pandas.types.common, pandas.types.api, pandas.indexes.base, pandas.types.cast, pandas.core.generic, pandas.tseries.period, pandas.tseries.tdi, pandas.core.nanops, pandas.tseries.base, pandas.core.frame, pandas.core.ops, pandas.core.groupby, pandas.sparse.array, pandas.core.strings, pandas.types.concat, pandas.tseries.index, pandas.types.missing
+missing module named pandas.types.common._ensure_int64 - imported by pandas.types.common, pandas.indexes.base, pandas.types.cast, pandas.core.algorithms, pandas.core.generic, pandas.tseries.period, pandas.tseries.tdi, pandas.core.nanops, pandas.tseries.base, pandas.core.internals, pandas.core.categorical, pandas.core.frame, pandas.core.groupby, pandas.tools.merge, pandas.io.pytables, pandas.indexes.multi, pandas.tseries.index
+missing module named pandas.types.common._ensure_categorical - imported by pandas.types.common, pandas.indexes.base, pandas.core.groupby
+missing module named pandas.types.common.is_numeric_dtype - imported by pandas.types.common, pandas.types.api, pandas.core.generic, pandas.core.nanops, pandas.tools.util, pandas.core.groupby, pandas.formats.format
+missing module named pandas.types.common._DATELIKE_DTYPES - imported by pandas.types.common, pandas.types.cast, pandas.core.missing, pandas.core.groupby, pandas.types.missing
+missing module named pandas.types.common._ensure_float - imported by pandas.types.common, pandas.core.frame, pandas.core.groupby
+missing module named pandas.types.common._ensure_float64 - imported by pandas.types.common, pandas.core.algorithms, pandas.core.nanops, pandas.core.missing, pandas.core.frame, pandas.core.groupby, pandas.core.window, pandas.tools.merge, pandas.stats.ols
+missing module named pandas.types.common.is_datetime_or_timedelta_dtype - imported by pandas.types.common, pandas.types.cast, pandas.core.nanops, pandas.tools.util, pandas.core.groupby
+missing module named pandas.types.common.is_complex_dtype - imported by pandas.types.common, pandas.types.api, pandas.types.cast, pandas.core.nanops, pandas.core.groupby, pandas.types.missing
 missing module named pandas.core.index._get_na_value - imported by pandas.core.index, pandas.core.reshape, pandas.core.series
+missing module named pandas.types.common._NS_DTYPE - imported by pandas.types.common, pandas.core.common, pandas.types.cast, pandas.core.internals, pandas.io.pickle, pandas.tseries.common, pandas.types.concat, pandas.tseries.index, pandas.types.missing
 missing module named pandas.sparse.series.SparseArray - imported by pandas.sparse.series, pandas.sparse.frame
 missing module named pandas.core.frame.extract_index - imported by pandas.core.frame, pandas.sparse.frame
 missing module named pandas.core.frame._default_index - imported by pandas.core.frame, pandas.sparse.frame
 missing module named pandas.core.frame._prep_ndarray - imported by pandas.core.frame, pandas.sparse.frame
-missing module named pandas.sparse.series.SparseSeries - imported by pandas.sparse.series, pandas.core.sparse, pandas.sparse.frame, pandas.sparse.api, pandas.core.series
-missing module named pandas.sparse.api.SparseDataFrame - imported by pandas.sparse.api, pandas.io.pytables, pandas.io.packers, pandas.sparse.series, pandas.types.concat
+missing module named pandas.sparse.series.SparseSeries - imported by pandas.sparse.series, pandas.sparse.api, pandas.sparse.frame, pandas.core.sparse, pandas.core.series
+missing module named pandas.sparse.series.SparseTimeSeries - imported by pandas.sparse.series, pandas.sparse.api
 missing module named pandas._sparse.BlockIndex - imported by pandas._sparse, pandas.sparse.array, pandas.sparse.series
-missing module named pandas._sparse.IntIndex - imported by pandas._sparse, pandas.sparse.array, pandas.core.reshape, pandas.sparse.series
+missing module named pandas._sparse.IntIndex - imported by pandas._sparse, pandas.sparse.array, pandas.sparse.series, pandas.core.reshape
 missing module named pandas._sparse.SparseIndex - imported by pandas._sparse, pandas.sparse.array
-missing module named pandas.indexes.base._index_shared_docs - imported by pandas.indexes.base, pandas.sparse.array, pandas.tseries.base, pandas.indexes.range, pandas.indexes.category, pandas.indexes.multi
+missing module named pandas.indexes.base._index_shared_docs - imported by pandas.indexes.base, pandas.tseries.tdi, pandas.tseries.base, pandas.tseries.period, pandas.sparse.array, pandas.indexes.category, pandas.indexes.range, pandas.indexes.numeric, pandas.indexes.multi, pandas.tseries.index
+missing module named pandas.algos.groupsort_indexer - imported by pandas.algos, pandas.indexes.base
+missing module named pandas.formats.format.format_array - imported by pandas.formats.format, pandas.indexes.base
+missing module named pandas.formats.format.get_console_size - imported by pandas.formats.format, pandas.indexes.base
+missing module named pandas.formats.format._get_adjustment - imported by pandas.formats.format, pandas.indexes.multi, pandas.indexes.base
+missing module named pandas.core.categorical._factorize_from_iterables - imported by pandas.core.categorical, pandas.tools.merge, pandas.io.pytables, pandas.indexes.multi
 missing module named pandas.hashtable.duplicated_int64 - imported by pandas.hashtable, pandas.core.frame, pandas.indexes.category, pandas.indexes.multi
-missing module named pandas.core.common.is_null_slice - imported by pandas.core.common, pandas.core.indexing, pandas.core.internals, pandas.indexes.multi, pandas.core.categorical
 missing module named pandas.core.common.PerformanceWarning - imported by pandas.core.common, pandas.core.ops, pandas.io.pytables, pandas.io.packers, pandas.indexes.multi, pandas.tseries.index
+missing module named pandas.core.common.is_null_slice - imported by pandas.core.common, pandas.core.indexing, pandas.core.internals, pandas.core.categorical, pandas.indexes.multi
 missing module named pandas.indexes.base._get_na_value - imported by pandas.indexes.base, pandas.indexes.multi, pandas.indexes.api
-missing module named pandas.indexes.base._ensure_index - imported by pandas.indexes.base, pandas.indexes.multi, pandas.indexes.api
 missing module named pandas.indexes.base._ensure_frozen - imported by pandas.indexes.base, pandas.indexes.multi
-missing module named pandas.core.common.is_dtype_equal - imported by pandas.core.common, pandas.core.internals, pandas.indexes.numeric, pandas.core.categorical, pandas.tseries.index
+missing module named pandas.formats.format.FloatArrayFormatter - imported by pandas.formats.format, pandas.core.internals, pandas.indexes.numeric
+missing module named pandas.types.common.pandas_dtype - imported by pandas.types.common, pandas.types.api, pandas.tseries.period, pandas.io.packers, pandas.indexes.numeric, pandas.tseries.index, pandas.types.missing
+missing module named pandas.types.common.is_int64_dtype - imported by pandas.types.common, pandas.types.api, pandas.core.algorithms, pandas.tools.merge, pandas.indexes.range
 missing module named pandas.indexes.base.InvalidIndexError - imported by pandas.indexes.base, pandas.indexes.numeric, pandas.indexes.multi, pandas.indexes.api
-missing module named pandas.indexes.base.Index - imported by pandas.indexes.base, pandas.indexes.range, pandas.indexes.numeric, pandas.indexes.category, pandas.indexes.multi, pandas.indexes.api
-missing module named pandas.core.common.is_iterator - imported by pandas.core.common, pandas.indexes.base, pandas.indexes.multi
-missing module named pandas.core.common._ensure_int64 - imported by pandas.core.common, pandas.core.nanops, pandas.indexes.base, pandas.indexes.multi, pandas.core.categorical
-missing module named pandas.core.common.is_integer_dtype - imported by pandas.core.common, pandas.tseries.timedeltas, pandas.core.nanops, pandas.core.ops, pandas.core.indexing, pandas.indexes.base, pandas.indexes.numeric, pandas.tseries.common, pandas.core.categorical
-missing module named pandas.core.common.is_float_dtype - imported by pandas.core.common, pandas.core.nanops, pandas.indexes.base, pandas.indexes.numeric
-missing module named pandas.core.common.is_float - imported by pandas.core.common, pandas.core.nanops, pandas.core.indexing, pandas.tseries.base, pandas.tseries.tdi, pandas.tseries.period, pandas.indexes.base, pandas.tseries.index
-missing module named pandas.core.common.is_object_dtype - imported by pandas.core.common, pandas.core.nanops, pandas.core.ops, pandas.core.frame, pandas.tseries.period, pandas.core.convert, pandas.io.packers, pandas.indexes.base, pandas.core.strings, pandas.indexes.numeric, pandas.indexes.multi, pandas.tseries.index
-missing module named pandas.core.common._ensure_object - imported by pandas.core.common, pandas.tseries.timedeltas, pandas.core.nanops, pandas.indexes.base, pandas.core.categorical
-missing module named pandas.sparse.api.SparseSeries - imported by pandas.sparse.api, pandas.io.pytables, pandas.io.packers, pandas.types.concat
+missing module named pandas.types.common.is_sparse - imported by pandas.types.common, pandas.types.api, pandas.core.indexing, pandas.core.internals, pandas.types.concat
+missing module named pandas.types.common._TD_DTYPE - imported by pandas.types.common, pandas.types.cast, pandas.tseries.tdi, pandas.core.internals, pandas.tseries.common, pandas.types.concat, pandas.types.missing
+missing module named pandas.types.common.is_period_dtype - imported by pandas.types.common, pandas.types.api, pandas.core.algorithms, pandas.tseries.period, pandas.types.concat, pandas.tseries.index
+missing module named pandas.indexes.base.Index - imported by pandas.indexes.base, pandas.indexes.category, pandas.indexes.range, pandas.indexes.numeric, pandas.indexes.multi, pandas.indexes.api
+missing module named pandas.indexes.base._ensure_index - imported by pandas.indexes.base, pandas.tseries.period, pandas.indexes.multi, pandas.indexes.api
 missing module named pandas.core.base.IndexOpsMixin - imported by pandas.core.base, pandas.indexes.base
 missing module named pandas.core.base.FrozenNDArray - imported by pandas.core.base, pandas.indexes.base
 missing module named pandas.core.base.FrozenList - imported by pandas.core.base, pandas.indexes.base, pandas.indexes.multi
-missing module named pandas.lib.Timedelta - imported by pandas.lib, pandas.indexes.base, pandas.tseries.period
+missing module named pandas.types.common.is_object_dtype - imported by pandas.types.common, pandas.core.base, pandas.types.api, pandas.indexes.base, pandas.types.cast, pandas.tseries.period, pandas.tseries.tdi, pandas.core.nanops, pandas.core.internals, pandas.core.frame, pandas.core.ops, pandas.io.packers, pandas.core.strings, pandas.types.concat, pandas.indexes.numeric, pandas.indexes.multi, pandas.tseries.index, pandas.types.missing
+missing module named pandas.types.common.is_datetime64_any_dtype - imported by pandas.types.common, pandas.types.api, pandas.indexes.base
+missing module named pandas.lib.Timedelta - imported by pandas.lib, pandas.indexes.base
 missing module named pandas.lib.is_datetime_array - imported by pandas.lib, pandas.indexes.base
-missing module named pandas.core.config.get_default_val - imported by pandas.core.config, pandas.formats.format, pandas.core.config_init
-missing module named pandas.tseries.period.IncompatibleFrequency - imported by pandas.tseries.period, pandas.formats.format
-missing module named pandas.core.index._sparsify - imported by pandas.core.index, pandas.formats.format
-missing module named pandas.tslib.iNaT - imported by pandas.tslib, pandas.core.algorithms, pandas.core.ops, pandas.formats.format, pandas.io.json
-missing module named pandas.tslib.Timestamp - imported by pandas.tslib, pandas.tseries.offsets, pandas.formats.format, pandas.io.stata
+missing module named pandas.types.missing.na_value_for_dtype - imported by pandas.types.missing, pandas.sparse.array, pandas.tools.merge
+missing module named pandas.types.common.is_dtype_equal - imported by pandas.types.common, pandas.types.api, pandas.indexes.base, pandas.types.cast, pandas.tseries.base, pandas.core.internals, pandas.core.categorical, pandas.core.frame, pandas.sparse.array, pandas.tools.merge, pandas.types.concat, pandas.indexes.numeric, pandas.tseries.index, pandas.types.missing
+missing module named pandas.tslib.iNaT - imported by pandas.tslib, pandas.types.missing, pandas.types.cast, pandas.core.algorithms, pandas.core.ops, pandas.io.json, pandas.formats.format
+missing module named pandas.tslib.Timestamp - imported by pandas.tslib, pandas.io.stata, pandas.tseries.offsets, pandas.formats.format
 missing module named pandas.tslib.format_array_from_datetime - imported by pandas.tslib, pandas.formats.format
-missing module named pandas.formats.printing.justify - imported by pandas.formats.printing, pandas.formats.format
-missing module named pandas.formats.printing.adjoin - imported by pandas.formats.printing, pandas.formats.format, pandas.io.pytables
-missing module named pandas.core.config.set_option - imported by pandas.core.config, pandas.formats.format, pandas.core.api
-missing module named pandas.core.common.is_complex - imported by pandas.core.common, pandas.core.nanops
-missing module named pandas.core.common._ensure_float64 - imported by pandas.core.common, pandas.core.nanops, pandas.stats.ols
-missing module named pandas.core.common._get_dtype - imported by pandas.core.common, pandas.core.nanops
-missing module named pandas.core.common._maybe_upcast_putmask - imported by pandas.core.common, pandas.core.nanops
-missing module named pandas.core.common._int64_max - imported by pandas.core.common, pandas.core.nanops
-missing module named pandas.core.common.is_int_or_datetime_dtype - imported by pandas.core.common, pandas.core.nanops
-missing module named pandas.core.common.is_any_int_dtype - imported by pandas.core.common, pandas.core.nanops
-missing module named pandas.core.common.is_complex_dtype - imported by pandas.core.common, pandas.core.nanops
-missing module named pandas.core.common.is_datetime64tz_dtype - imported by pandas.core.common, pandas.core.ops, pandas.tseries.common
-missing module named pandas.tseries.period.PeriodIndex - imported by pandas.tseries.period, pandas.formats.format, pandas.core.generic, pandas.tseries.api, pandas.core.api, pandas.tools.plotting, pandas.tseries.converter, pandas.tseries.resample, pandas.core.frame, pandas.indexes.base, pandas.tseries.common, pandas.core.series, pandas.core.algorithms, pandas.tseries.index
-missing module named pandas.core.common._INT64_DTYPE - imported by pandas.core.common, pandas.tseries.tdi, pandas.tseries.period, pandas.tseries.index
-missing module named pandas.core.common._maybe_box - imported by pandas.core.common, pandas.tseries.tdi, pandas.tseries.period, pandas.tseries.index
+missing module named pandas.formats.format._get_format_datetime64 - imported by pandas.formats.format, pandas.tseries.index
+missing module named pandas.formats.format._is_dates_only - imported by pandas.formats.format, pandas.tseries.index
+missing module named pandas.formats.format.format_percentiles - imported by pandas.formats.format, pandas.core.generic
+missing module named pandas.formats.format._get_format_datetime64_from_values - imported by pandas.formats.format, pandas.core.internals, pandas.tseries.index
+missing module named pandas.formats.format._put_lines - imported by pandas.formats.format, pandas.core.frame
+missing module named pandas.formats.format.set_eng_float_format - imported by pandas.formats.format, pandas.core.api
+missing module named pandas.formats.format.Timedelta64Formatter - imported by pandas.formats.format, pandas.tseries.tdi
+missing module named pandas.formats.format._get_format_timedelta64 - imported by pandas.formats.format, pandas.tseries.tdi
+missing module named pandas.types.common.is_complex - imported by pandas.types.common, pandas.types.api, pandas.types.cast, pandas.core.nanops
+missing module named pandas.types.common.is_any_int_dtype - imported by pandas.types.common, pandas.types.api, pandas.core.nanops
+missing module named pandas.types.common._get_dtype - imported by pandas.types.common, pandas.core.nanops, pandas.core.internals
+missing module named pandas.types.common.is_int_or_datetime_dtype - imported by pandas.types.common, pandas.core.nanops, pandas.tools.merge
+missing module named pandas.core.common.UnsupportedFunctionCall - imported by pandas.core.common, pandas.compat.numpy.function
+missing module named pandas.lib.infer_dtype - imported by pandas.lib, pandas.tseries.period, pandas.io.stata
 missing module named pandas.core.base._shared_docs - imported by pandas.core.base, pandas.tseries.tdi, pandas.tseries.period, pandas.core.categorical, pandas.tseries.index
-missing module named pandas._period.get_period_field_arr - imported by pandas._period, pandas.tseries.period
-missing module named pandas._period.Period - imported by pandas._period, pandas.tseries.period
-missing module named pandas._period._quarter_to_myear - imported by pandas._period, pandas.tseries.period
-missing module named pandas._period.IncompatibleFrequency - imported by pandas._period, pandas.tseries.period, pandas.tseries.common
-missing module named pandas._period._validate_end_alias - imported by pandas._period, pandas.tseries.period
-missing module named pandas.tseries.base.DatetimeIndexOpsMixin - imported by pandas.tseries.base, pandas.tseries.tdi, pandas.tseries.period, pandas.tseries.index
-missing module named pandas.core.index.Int64Index - imported by pandas.core.index, pandas.tseries.tdi, pandas.tseries.base, pandas.core.api, pandas.tseries.index
-missing module named pandas.tseries.base.TimelikeOps - imported by pandas.tseries.base, pandas.tseries.tdi, pandas.tseries.index
 missing module named pandas.tseries.index.Index - imported by pandas.tseries.index, pandas.tseries.period
 missing module named pandas.tseries.index.Int64Index - imported by pandas.tseries.index, pandas.tseries.period
-missing module named pandas.core.common._TD_DTYPE - imported by pandas.core.common, pandas.tseries.tdi, pandas.core.internals, pandas.tseries.common
-missing module named pandas.core.common._NS_DTYPE - imported by pandas.core.common, pandas.core.internals, pandas.tseries.common, pandas.tseries.index
-missing module named pandas.core.common.is_period_arraylike - imported by pandas.core.common, pandas.tseries.common
-missing module named pandas.core.common.is_datetime_arraylike - imported by pandas.core.common, pandas.tseries.common
-missing module named pandas.core.base.NoNewAttributesMixin - imported by pandas.core.base, pandas.core.strings, pandas.tseries.common, pandas.core.categorical
-missing module named pandas.core.base.PandasDelegate - imported by pandas.core.base, pandas.tseries.common, pandas.core.categorical
+missing module named pandas.types.dtypes.PeriodDtype - imported by pandas.types.dtypes, pandas.tseries.period, pandas.types.common
+missing module named pandas.types.dtypes.CategoricalDtype - imported by pandas.types.dtypes, pandas.core.internals, pandas.core.categorical, pandas.types.common
+missing module named pandas.types.dtypes.DatetimeTZDtype - imported by pandas.types.dtypes, pandas.core.internals, pandas.io.sql, pandas.tseries.index, pandas.types.common
+missing module named pandas.types.dtypes.ExtensionDtype - imported by pandas.types.dtypes, pandas.types.cast, pandas.types.common
+missing module named pandas.tseries.tdi.TimedeltaIndex - imported by pandas.tseries.tdi, pandas.tseries.base, pandas.tseries.period, pandas.core.frame, pandas.tseries.resample, pandas.core.api, pandas.tseries.api, pandas.io.pytables, pandas.tseries.common, pandas.core.series, pandas.indexes.base
+missing module named pandas.core.index.Int64Index - imported by pandas.core.index, pandas.tseries.tdi, pandas.core.api, pandas.tseries.index
+missing module named pandas.core.common._maybe_box - imported by pandas.core.common, pandas.tseries.tdi, pandas.tseries.index
+missing module named pandas.types.common.is_timedelta64_ns_dtype - imported by pandas.types.common, pandas.types.api, pandas.tseries.tdi
+missing module named pandas.core.base.NoNewAttributesMixin - imported by pandas.core.base, pandas.core.categorical, pandas.core.strings, pandas.tseries.common
+missing module named pandas.core.base.PandasDelegate - imported by pandas.core.base, pandas.core.categorical, pandas.tseries.common
+missing module named pandas.types.common.is_datetime_arraylike - imported by pandas.types.common, pandas.tseries.common
 missing module named pandas.core.base.AccessorProperty - imported by pandas.core.base, pandas.core.strings
-missing module named pandas.core.categorical.Categorical - imported by pandas.core.categorical, pandas.core.internals, pandas.core.groupby, pandas.core.panel, pandas.core.api, pandas.core.reshape, pandas.tools.tile, pandas.io.pytables, pandas.core.frame, pandas.io.stata, pandas.types.concat, pandas.indexes.category, pandas.indexes.multi, pandas.core.series, pandas.tools.merge
-missing module named pandas.core.categorical.CategoricalAccessor - imported by pandas.core.categorical, pandas.core.series
-missing module named pandas.core.common._coerce_indexer_dtype - imported by pandas.core.common, pandas.core.categorical
-missing module named pandas.core.common._possibly_infer_to_datetimelike - imported by pandas.core.common, pandas.core.frame, pandas.core.categorical
-missing module named pandas.core.algorithms.factorize - imported by pandas.core.algorithms, pandas.core.api, pandas.core.categorical, pandas.core.base
-missing module named pandas.core.categorical.maybe_to_categorical - imported by pandas.core.categorical, pandas.core.internals
+missing module named pandas.core.categorical.Categorical - imported by pandas.core.categorical, pandas.core.frame, pandas.core.groupby, pandas.core.api, pandas.core.reshape, pandas.tools.tile, pandas.io.stata, pandas.indexes.category, pandas.core.internals, pandas.io.pytables, pandas.core.series
+missing module named pandas.core.algorithms._get_data_algo - imported by pandas.core.algorithms, pandas.core.categorical
+missing module named pandas.core.algorithms._hashtables - imported by pandas.core.algorithms, pandas.core.categorical
+missing module named pandas.core.categorical._factorize_from_iterable - imported by pandas.core.categorical, pandas.tools.merge, pandas.core.reshape
+missing module named pandas.core.algorithms.factorize - imported by pandas.core.algorithms, pandas.core.categorical, pandas.core.api, pandas.core.base
+missing module named pandas.types.common.is_categorical - imported by pandas.types.common, pandas.types.api, pandas.core.algorithms, pandas.core.internals, pandas.core.categorical
+missing module named pandas.core.internals.SingleBlockManager - imported by pandas.core.internals, pandas.sparse.series, pandas.core.series
 missing module named pandas.lib.BlockPlacement - imported by pandas.lib, pandas.core.internals
-missing module named pandas.core.common.is_null_datelike_scalar - imported by pandas.core.common, pandas.core.internals
-missing module named pandas.core.common._is_na_compat - imported by pandas.core.common, pandas.core.internals
-missing module named pandas.core.common._maybe_convert_scalar - imported by pandas.core.common, pandas.core.internals
-missing module named pandas.core.common._maybe_promote - imported by pandas.core.common, pandas.core.internals, pandas.core.generic, pandas.core.reshape
-missing module named pandas.core.common.is_sparse - imported by pandas.core.common, pandas.core.internals
-missing module named pandas.core.common.is_numeric_v_string_like - imported by pandas.core.common, pandas.core.internals
-missing module named pandas.core.common.is_categorical - imported by pandas.core.common, pandas.core.internals
-missing module named pandas.core.common._maybe_convert_string_to_object - imported by pandas.core.common, pandas.core.internals
+missing module named pandas.core.internals.concatenate_block_managers - imported by pandas.core.internals, pandas.tools.merge
+missing module named pandas.core.internals.items_overlap_with_suffix - imported by pandas.core.internals, pandas.tools.merge
+missing module named pandas.core.indexing.length_of_indexer - imported by pandas.core.indexing, pandas.core.internals
+missing module named pandas.types.missing._is_na_compat - imported by pandas.types.missing, pandas.core.internals
+missing module named pandas.types.missing.is_null_datelike_scalar - imported by pandas.types.missing, pandas.core.internals
+missing module named pandas.types.common.is_re - imported by pandas.types.common, pandas.types.api, pandas.core.internals
+missing module named pandas.types.common.is_re_compilable - imported by pandas.types.common, pandas.types.api, pandas.core.generic, pandas.core.internals
 missing module named pandas.core.algorithms.value_counts - imported by pandas.core.algorithms, pandas.core.api, pandas.core.base
-missing module named pandas.core.base.StringMixin - imported by pandas.core.base, pandas.io.pytables, pandas.computation.pytables, pandas.computation.expr, pandas.computation.ops, pandas.computation.scope, pandas.io.stata, pandas.stats.ols, pandas.stats.fama_macbeth
+missing module named pandas.core.base.StringMixin - imported by pandas.core.base, pandas.computation.expr, pandas.computation.ops, pandas.computation.scope, pandas.io.stata, pandas.io.pytables, pandas.computation.pytables, pandas.stats.ols, pandas.stats.fama_macbeth
+missing module named pandas.lib.convert_json_to_lines - imported by pandas.lib, pandas.io.json
 missing module named pandas.core.generic._shared_doc_kwargs - imported by pandas.core.generic, pandas.tools.plotting
 missing module named pandas.core.common.SettingWithCopyWarning - imported by pandas.core.common, pandas.core.generic
-missing module named pandas.core.common._infer_fill_value - imported by pandas.core.common, pandas.core.indexing
+missing module named pandas.core.indexing.maybe_convert_indices - imported by pandas.core.indexing, pandas.core.internals, pandas.core.series, pandas.indexes.base
+missing module named pandas.core.indexing.check_bool_indexer - imported by pandas.core.indexing, pandas.core.frame, pandas.core.series
+missing module named pandas.core.indexing._non_reducing_slice - imported by pandas.core.indexing, pandas.formats.style
+missing module named pandas.core.indexing._maybe_numeric_slice - imported by pandas.core.indexing, pandas.formats.style
+missing module named pandas.core.indexing.IndexSlice - imported by pandas.core.indexing, pandas.core.api
+missing module named pandas.core.indexing.convert_to_index_sliceable - imported by pandas.core.indexing, pandas.core.frame
 missing module named pandas.core.common.is_full_slice - imported by pandas.core.common, pandas.core.indexing
-missing module named pandas.core.index._ensure_index - imported by pandas.core.index, pandas.sparse.series, pandas.core.generic, pandas.formats.format, pandas.core.internals, pandas.core.groupby, pandas.core.panel, pandas.sparse.frame, pandas.sparse.panel, pandas.io.pytables, pandas.core.frame, pandas.core.series, pandas.tools.merge
-missing module named pandas.core.index.InvalidIndexError - imported by pandas.core.index, pandas.core.generic, pandas.core.series
-missing module named pandas.core.index.Float64Index - imported by pandas.core.index, pandas.core.api, pandas.core.series, pandas.tseries.index
-missing module named pandas.core.series._sanitize_array - imported by pandas.core.series, pandas.core.frame, pandas.core.categorical
+missing module named pandas.types.missing._infer_fill_value - imported by pandas.types.missing, pandas.core.indexing
 missing module named pandas.core.series._sanitize_index - imported by pandas.core.series, pandas.core.frame
-missing module named pandas.core.series.remove_na - imported by pandas.core.series, pandas.tools.plotting
 missing module named pandas.core.series.TimeSeries - imported by pandas.core.series, pandas.core.api
-missing module named pandas.core.common._possibly_cast_to_datetime - imported by pandas.core.common, pandas.core.series, pandas.core.convert
-missing module named pandas.core.common._maybe_match_name - imported by pandas.core.common, pandas.core.series, pandas.core.ops, pandas.sparse.series
-missing module named pandas.core.common.is_extension_type - imported by pandas.core.common, pandas.core.series, pandas.core.frame, pandas.core.internals
-missing module named pandas.core.common._maybe_box_datetimelike - imported by pandas.core.common, pandas.core.series, pandas.core.frame, pandas.core.generic
-missing module named pandas.core.common._infer_dtype_from_scalar - imported by pandas.core.common, pandas.core.series, pandas.core.frame, pandas.core.internals, pandas.core.panel
-missing module named pandas.core.common._asarray_tuplesafe - imported by pandas.core.common, pandas.core.series, pandas.core.indexing, pandas.io.pytables
-missing module named pandas.core.common._possibly_convert_platform - imported by pandas.core.common, pandas.core.series
+missing module named pandas.core.series.remove_na - imported by pandas.core.series, pandas.tools.plotting
+missing module named pandas.core.series._sanitize_array - imported by pandas.core.series, pandas.core.categorical, pandas.core.frame
+missing module named pandas.core.index._ensure_index - imported by pandas.core.index, pandas.core.series, pandas.core.generic, pandas.core.internals, pandas.core.frame, pandas.core.panel, pandas.core.groupby, pandas.sparse.series, pandas.sparse.frame, pandas.core.window, pandas.tools.merge, pandas.io.pytables, pandas.formats.format
+missing module named pandas.core.index.InvalidIndexError - imported by pandas.core.index, pandas.core.series, pandas.core.generic, pandas.sparse.series
+missing module named pandas.core.index.Float64Index - imported by pandas.core.index, pandas.core.series, pandas.core.api, pandas.tseries.index
 missing module named pandas.core.common.SettingWithCopyError - imported by pandas.core.common, pandas.core.series, pandas.core.generic
-missing module named pandas.core.common._possibly_castable - imported by pandas.core.common, pandas.core.series
-missing module named pandas.core.common.notnull - imported by pandas.core.common, pandas.core.nanops, pandas.core.series, pandas.core.ops, pandas.core.frame, pandas.formats.format, pandas.core.generic, pandas.core.groupby, pandas.core.api, pandas.core.reshape, pandas.core.strings, pandas.core.categorical
-missing module named pandas.core.common._coerce_to_dtype - imported by pandas.core.common, pandas.core.series
-missing module named pandas.core.common.is_categorical_dtype - imported by pandas.core.common, pandas.core.series, pandas.core.ops, pandas.core.frame, pandas.core.groupby, pandas.io.packers, pandas.indexes.base, pandas.core.strings, pandas.tseries.common, pandas.core.categorical
+missing module named pandas.core.common._maybe_match_name - imported by pandas.core.common, pandas.core.series, pandas.core.ops, pandas.sparse.series
 missing module named pandas.core.common._default_index - imported by pandas.core.common, pandas.core.series, pandas.core.frame, pandas.core.panel
-missing module named pandas.core.common._maybe_upcast - imported by pandas.core.common, pandas.core.series, pandas.core.frame
-missing module named pandas.core.common.is_datetimetz - imported by pandas.core.common, pandas.core.series, pandas.core.frame, pandas.core.internals, pandas.indexes.base, pandas.tseries.index
-missing module named pandas.core.common._try_sort - imported by pandas.core.common, pandas.core.series, pandas.core.frame, pandas.core.panel, pandas.sparse.frame
-missing module named pandas.core.common.is_integer - imported by pandas.core.common, pandas.core.nanops, pandas.compat.numpy.function, pandas.core.series, pandas.core.indexing, pandas.tseries.base, pandas.tseries.tdi, pandas.tseries.period, pandas.indexes.base, pandas.tseries.index
-missing module named pandas.core.common.isnull - imported by pandas.core.common, pandas.core.nanops, pandas.core.series, pandas.core.ops, pandas.sparse.series, pandas.core.frame, pandas.core.indexing, pandas.tseries.tdi, pandas.formats.format, pandas.tseries.period, pandas.core.internals, pandas.core.convert, pandas.core.generic, pandas.sparse.frame, pandas.core.groupby, pandas.core.api, pandas.io.sql, pandas.indexes.base, pandas.core.strings, pandas.indexes.numeric, pandas.indexes.multi, pandas.core.categorical
+missing module named pandas.core.common._maybe_box_datetimelike - imported by pandas.core.common, pandas.core.series, pandas.core.generic, pandas.core.frame
+missing module named pandas.core.common._try_sort - imported by pandas.core.common, pandas.core.series, pandas.core.frame, pandas.tools.plotting, pandas.core.panel, pandas.sparse.frame
+missing module named pandas.core.common._values_from_object - imported by pandas.core.common, pandas.indexes.base, pandas.core.series, pandas.core.indexing, pandas.core.generic, pandas.tseries.tdi, pandas.core.nanops, pandas.core.frame, pandas.computation.expressions, pandas.core.ops, pandas.core.groupby, pandas.sparse.series, pandas.core.strings, pandas.indexes.numeric, pandas.indexes.multi, pandas.tseries.index
 missing module named pandas.core.common._dict_compat - imported by pandas.core.common, pandas.core.series, pandas.core.frame
-missing module named pandas.core.common._values_from_object - imported by pandas.core.common, pandas.core.nanops, pandas.core.series, pandas.computation.expressions, pandas.core.ops, pandas.sparse.series, pandas.core.frame, pandas.core.indexing, pandas.tseries.tdi, pandas.tseries.period, pandas.core.generic, pandas.core.groupby, pandas.indexes.base, pandas.core.strings, pandas.indexes.multi, pandas.tseries.index
-missing module named pandas.core.common.is_bool_indexer - imported by pandas.core.common, pandas.core.series, pandas.core.indexing, pandas.indexes.base, pandas.indexes.multi
+missing module named pandas.core.common._asarray_tuplesafe - imported by pandas.core.common, pandas.indexes.base, pandas.core.series, pandas.core.indexing, pandas.io.pytables
+missing module named pandas.core.common.is_bool_indexer - imported by pandas.core.common, pandas.indexes.base, pandas.core.series, pandas.core.indexing, pandas.indexes.multi
+missing module named pandas.types.missing.isnull - imported by pandas.types.missing, pandas.core.base, pandas.core.common, pandas.indexes.base, pandas.types.cast, pandas.core.algorithms, pandas.core.series, pandas.core.indexing, pandas.core.generic, pandas.tseries.tdi, pandas.core.nanops, pandas.tseries.base, pandas.core.internals, pandas.core.categorical, pandas.core.missing, pandas.core.frame, pandas.core.ops, pandas.tools.plotting, pandas.core.groupby, pandas.core.api, pandas.sparse.series, pandas.sparse.array, pandas.sparse.frame, pandas.tools.tile, pandas.io.sql, pandas.core.strings, pandas.indexes.numeric, pandas.indexes.multi, pandas.tseries.index, pandas.formats.format
+missing module named pandas.types.common._string_dtypes - imported by pandas.types.common, pandas.types.cast
+missing module named pandas.types.common._POSSIBLY_CAST_DTYPES - imported by pandas.types.common, pandas.types.cast
+missing module named pandas.types.common._ensure_int8 - imported by pandas.types.common, pandas.types.cast
+missing module named pandas.types.common._ensure_int16 - imported by pandas.types.common, pandas.types.cast
+missing module named pandas.types.common._ensure_int32 - imported by pandas.types.common, pandas.types.cast
+missing module named pandas.types.common._INT64_DTYPE - imported by pandas.types.common, pandas.types.cast, pandas.tseries.index
+missing module named pandas.types.common.is_dict_like - imported by pandas.types.common, pandas.types.api, pandas.core.series, pandas.core.generic, pandas.io.sql
+missing module named pandas.types.common.is_iterator - imported by pandas.types.common, pandas.types.api, pandas.indexes.base, pandas.core.series, pandas.core.frame, pandas.tools.plotting, pandas.indexes.multi
+missing module named pandas.types.common.is_float_dtype - imported by pandas.types.common, pandas.types.api, pandas.indexes.base, pandas.types.cast, pandas.core.algorithms, pandas.core.series, pandas.tseries.period, pandas.core.nanops, pandas.core.missing, pandas.core.frame, pandas.tseries.converter, pandas.core.window, pandas.tools.merge, pandas.indexes.numeric, pandas.types.missing, pandas.formats.format
+missing module named pandas.types.common._ensure_platform_int - imported by pandas.types.common, pandas.indexes.base, pandas.core.algorithms, pandas.core.series, pandas.core.indexing, pandas.core.internals, pandas.core.categorical, pandas.core.frame, pandas.core.groupby, pandas.core.reshape, pandas.sparse.array, pandas.sparse.frame, pandas.indexes.category, pandas.io.pytables, pandas.indexes.multi
+missing module named pandas.types.common.is_timedelta64_dtype - imported by pandas.types.common, pandas.types.api, pandas.indexes.base, pandas.types.cast, pandas.tseries.timedeltas, pandas.core.algorithms, pandas.core.series, pandas.core.generic, pandas.tseries.period, pandas.tseries.frequencies, pandas.tseries.tdi, pandas.core.nanops, pandas.core.internals, pandas.core.ops, pandas.core.groupby, pandas.core.window, pandas.io.pytables, pandas.tseries.common, pandas.types.concat, pandas.types.missing, pandas.formats.format
+missing module named pandas.types.common.is_datetimelike - imported by pandas.types.common, pandas.core.series, pandas.core.categorical, pandas.types.missing
+missing module named pandas.types.common.is_extension_type - imported by pandas.types.common, pandas.types.api, pandas.types.cast, pandas.core.algorithms, pandas.core.series, pandas.core.internals, pandas.core.frame
+missing module named pandas.types.common.is_datetimetz - imported by pandas.types.common, pandas.types.api, pandas.types.cast, pandas.core.algorithms, pandas.core.series, pandas.core.internals, pandas.core.frame, pandas.core.ops, pandas.types.concat, pandas.tseries.index, pandas.formats.format
+missing module named pandas.types.common._coerce_to_dtype - imported by pandas.types.common, pandas.types.cast, pandas.core.series, pandas.core.generic
+missing module named pandas.types.common.is_hashable - imported by pandas.types.common, pandas.types.api, pandas.core.series, pandas.tools.plotting
+missing module named pandas.tseries.offsets.DateOffset - imported by pandas.tseries.offsets, pandas.tseries.frequencies, pandas.tseries.base, pandas.tseries.tdi, pandas.tseries.plotting, pandas.tseries.resample, pandas.core.api, pandas.core.window, pandas.indexes.base, pandas.tseries.index, pandas.tseries.tools, pandas.types.dtypes
 missing module named pandas.tslib.OutOfBoundsDatetime - imported by pandas.tslib, pandas.tseries.offsets
-missing module named pandas.tseries.index.DatetimeIndex - imported by pandas.tseries.index, pandas.core.generic, pandas.tseries.period, pandas.formats.format, pandas.core.internals, pandas.tseries.api, pandas.core.api, pandas.tseries.plotting, pandas.tseries.resample, pandas.core.frame, pandas.types.concat, pandas.indexes.base, pandas.tseries.common, pandas.core.series, pandas.core.algorithms, pandas.tseries.tools
+missing module named pandas.tseries.offsets.generate_range - imported by pandas.tseries.offsets, pandas.tseries.index
+missing module named pandas.tseries.index.DatetimeIndex - imported by pandas.tseries.index, pandas.core.generic, pandas.tseries.period, pandas.tseries.base, pandas.core.frame, pandas.tseries.plotting, pandas.tseries.resample, pandas.core.api, pandas.core.internals, pandas.tseries.api, pandas.tseries.common, pandas.core.series, pandas.core.algorithms, pandas.indexes.base, pandas.tseries.tools, pandas.formats.format
+missing module named pandas.types.common.is_string_dtype - imported by pandas.types.common, pandas.types.api, pandas.tseries.index, pandas.types.missing
+missing module named pandas.tseries.index.bdate_range - imported by pandas.tseries.index, pandas.core.api, pandas.tseries.api
 missing module named pandas.tseries.index.Timestamp - imported by pandas.tseries.index, pandas.core.api
-missing module named pandas.tseries.index.bdate_range - imported by pandas.tseries.index, pandas.tseries.api, pandas.core.api
+missing module named pandas.tseries.tools.normalize_date - imported by pandas.tseries.tools, pandas.tseries.index, pandas.tseries.offsets
 missing module named pandas.tseries.tools.to_time - imported by pandas.tseries.tools, pandas.tseries.index
 missing module named pandas.tseries.tools.parse_time_string - imported by pandas.tseries.tools, pandas.tseries.period, pandas.tseries.index
-missing module named pandas.tseries.tools.to_datetime - imported by pandas.tseries.tools, pandas.tseries.offsets, pandas.core.api, pandas.io.sql, pandas.core.generic, pandas.core.algorithms, pandas.core.common
-missing module named pandas.tseries.tools.normalize_date - imported by pandas.tseries.tools, pandas.tseries.offsets, pandas.tseries.index
-missing module named pandas.core.config.get_option - imported by pandas.core.config, pandas.types.dtypes, pandas.core.common, pandas.core.base, pandas.formats.format, pandas.io.parsers, pandas.core.api, pandas.io.pytables, pandas.core.frame, pandas.indexes.base, pandas.indexes.category, pandas.indexes.multi, pandas.core.series, pandas.core.categorical, pandas.tseries.tools, pandas.formats.printing
-missing module named pandas.core.config.reset_option - imported by pandas.core.config, pandas.core.api
-missing module named pandas.core.config.options - imported by pandas.core.config, pandas.core.api
-missing module named pandas.core.config.describe_option - imported by pandas.core.config, pandas.core.api
-missing module named pandas.core.frame.DataFrame - imported by pandas.core.frame, pandas.core.groupby, pandas.core.panel, pandas.sparse.frame, pandas.sparse.panel, pandas.io.excel, pandas.io.parsers, pandas.core.api, pandas.core.reshape, pandas.tools.plotting, pandas.io.stata, pandas.sparse.series, pandas.types.concat, pandas.core.series, pandas.tools.merge, pandas.stats.plm
+missing module named pandas.tseries.tools.to_datetime - imported by pandas.tseries.tools, pandas.types.cast, pandas.core.api, pandas.io.sql, pandas.core.generic, pandas.core.algorithms, pandas.tseries.offsets
+missing module named pandas.types.missing.notnull - imported by pandas.types.missing, pandas.tseries.tools, pandas.types.cast, pandas.core.series, pandas.core.generic, pandas.core.nanops, pandas.core.categorical, pandas.core.frame, pandas.core.ops, pandas.tools.plotting, pandas.core.panel, pandas.core.groupby, pandas.core.api, pandas.core.reshape, pandas.sparse.series, pandas.sparse.array, pandas.sparse.frame, pandas.core.strings, pandas.formats.format
+missing module named pandas.types.common.is_datetime64_ns_dtype - imported by pandas.types.common, pandas.tseries.tools, pandas.types.api, pandas.tseries.converter, pandas.tseries.index
+missing module named pandas.types.common.is_datetime64tz_dtype - imported by pandas.types.common, pandas.tseries.tools, pandas.types.api, pandas.types.cast, pandas.core.series, pandas.core.generic, pandas.tseries.period, pandas.core.internals, pandas.core.frame, pandas.core.ops, pandas.tools.merge, pandas.io.pytables, pandas.io.sql, pandas.tseries.common, pandas.types.missing
+missing module named pandas.types.common.is_datetime64_dtype - imported by pandas.types.common, pandas.tseries.tools, pandas.types.api, pandas.types.cast, pandas.core.algorithms, pandas.core.generic, pandas.tseries.period, pandas.tseries.frequencies, pandas.core.nanops, pandas.core.internals, pandas.core.missing, pandas.core.frame, pandas.core.ops, pandas.core.groupby, pandas.io.pickle, pandas.io.stata, pandas.tools.merge, pandas.io.pytables, pandas.tseries.common, pandas.types.concat, pandas.tseries.index, pandas.types.missing, pandas.formats.format
+missing module named pandas.core.config.get_option - imported by pandas.core.config, pandas.formats.printing, pandas.types.dtypes, pandas.core.common, pandas.core.categorical, pandas.core.frame, pandas.io.parsers, pandas.core.api, pandas.formats.style, pandas.indexes.category, pandas.io.pytables, pandas.core.series, pandas.indexes.base, pandas.indexes.multi, pandas.core.base, pandas.tseries.tools, pandas.types.missing, pandas.formats.format
+missing module named pandas.core.frame.DataFrame - imported by pandas.core.frame, pandas.tools.plotting, pandas.core.panel, pandas.io.excel, pandas.io.parsers, pandas.core.groupby, pandas.core.api, pandas.core.reshape, pandas.sparse.series, pandas.sparse.frame, pandas.io.stata, pandas.core.series, pandas.types.concat, pandas.stats.plm
 missing module named pandas.core.index._union_indexes - imported by pandas.core.index, pandas.core.frame
 missing module named pandas.hashtable._SIZE_HINT_LIMIT - imported by pandas.hashtable, pandas.core.frame
 missing module named pandas.core.common._unpickle_array - imported by pandas.core.common, pandas.core.frame
-missing module named pandas.tslib.NaT - imported by pandas.tslib, pandas.io.stata
-missing module named pandas.lib.infer_dtype - imported by pandas.lib, pandas.io.stata
+missing module named pandas.tslib.NaT - imported by pandas.tslib, pandas.types.missing, pandas.io.stata
 missing module named pandas.lib.max_len_string_array - imported by pandas.lib, pandas.io.stata
 missing module named numexpr - imported by pandas.computation, pandas.computation.expressions, pandas.computation.engines
-missing module named pandas.formats.printing.pprint_thing_encoded - imported by pandas.formats.printing, pandas.computation.pytables, pandas.computation.ops
-missing module named pandas.core.index.MultiIndex - imported by pandas.core.index, pandas.core.generic, pandas.core.indexing, pandas.formats.format, pandas.core.internals, pandas.core.groupby, pandas.core.panel, pandas.sparse.frame, pandas.sparse.panel, pandas.io.parsers, pandas.core.api, pandas.core.reshape, pandas.tools.plotting, pandas.core.frame, pandas.sparse.scipy_sparse, pandas.core.strings, pandas.core.series, pandas.tools.merge, pandas.stats.ols, pandas.tools.pivot
-missing module named pandas.core.index.Index - imported by pandas.core.index, pandas.sparse.series, pandas.core.generic, pandas.core.indexing, pandas.tseries.base, pandas.tseries.tdi, pandas.formats.format, pandas.core.internals, pandas.core.groupby, pandas.core.panel, pandas.tools.util, pandas.sparse.frame, pandas.sparse.panel, pandas.io.parsers, pandas.core.api, pandas.tools.plotting, pandas.tseries.converter, pandas.core.frame, pandas.sparse.scipy_sparse, pandas.core.strings, pandas.core.series, pandas.tools.merge, pandas.tseries.index, pandas.core.common, pandas.tools.pivot
+missing module named pandas.types.common.is_named_tuple - imported by pandas.types.common, pandas.types.api, pandas.core.frame
+missing module named pandas.types.common._get_dtype_from_object - imported by pandas.types.common, pandas.core.frame
+missing module named pandas.core.index.RangeIndex - imported by pandas.core.index, pandas.io.parsers, pandas.core.api, pandas.core.common
+missing module named pandas.core.index.MultiIndex - imported by pandas.core.index, pandas.core.series, pandas.core.indexing, pandas.core.generic, pandas.core.internals, pandas.core.frame, pandas.tools.plotting, pandas.core.panel, pandas.io.parsers, pandas.core.groupby, pandas.core.api, pandas.sparse.scipy_sparse, pandas.sparse.frame, pandas.core.reshape, pandas.core.strings, pandas.formats.format, pandas.stats.ols, pandas.tools.pivot
+missing module named pandas.core.index.Index - imported by pandas.core.index, pandas.core.series, pandas.core.indexing, pandas.core.generic, pandas.tseries.tdi, pandas.tseries.base, pandas.core.internals, pandas.core.frame, pandas.tools.util, pandas.tools.plotting, pandas.tseries.converter, pandas.core.panel, pandas.io.parsers, pandas.core.groupby, pandas.core.api, pandas.sparse.series, pandas.sparse.scipy_sparse, pandas.sparse.frame, pandas.core.strings, pandas.core.common, pandas.tseries.index, pandas.formats.format, pandas.tools.pivot
 missing module named pandas.core.index._get_consensus_names - imported by pandas.core.index, pandas.tools.merge
-missing module named pandas.core.index.RangeIndex - imported by pandas.core.index, pandas.core.api, pandas.core.common
+missing module named pandas.types.common.is_integer - imported by pandas.types.common, pandas.types.api, pandas.compat.numpy.function, pandas.indexes.base, pandas.types.cast, pandas.core.series, pandas.core.indexing, pandas.core.generic, pandas.tseries.period, pandas.tseries.frequencies, pandas.tseries.tdi, pandas.core.nanops, pandas.tseries.base, pandas.core.internals, pandas.core.frame, pandas.tools.plotting, pandas.tseries.converter, pandas.core.panel, pandas.io.excel, pandas.io.parsers, pandas.sparse.array, pandas.core.window, pandas.tools.tile, pandas.tools.merge, pandas.core.strings, pandas.indexes.range, pandas.tseries.index, pandas.types.missing, pandas.formats.format
+missing module named pandas.types.common.is_integer_dtype - imported by pandas.types.common, pandas.tseries.tools, pandas.types.api, pandas.indexes.base, pandas.types.cast, pandas.tseries.timedeltas, pandas.core.algorithms, pandas.core.series, pandas.core.indexing, pandas.tseries.period, pandas.tseries.tdi, pandas.core.nanops, pandas.core.internals, pandas.core.categorical, pandas.core.missing, pandas.core.frame, pandas.core.ops, pandas.tseries.converter, pandas.io.parsers, pandas.core.groupby, pandas.sparse.array, pandas.core.window, pandas.tools.merge, pandas.tseries.common, pandas.indexes.numeric, pandas.tseries.index, pandas.types.missing, pandas.formats.format
+missing module named pandas.types.common.is_scalar - imported by pandas.types.common, pandas.core.base, pandas.types.api, pandas.indexes.base, pandas.types.cast, pandas.core.algorithms, pandas.core.series, pandas.core.indexing, pandas.core.generic, pandas.tseries.period, pandas.tseries.tdi, pandas.core.nanops, pandas.tseries.base, pandas.core.internals, pandas.core.categorical, pandas.core.missing, pandas.core.frame, pandas.computation.ops, pandas.core.panel, pandas.io.parsers, pandas.core.groupby, pandas.sparse.series, pandas.sparse.array, pandas.sparse.list, pandas.tools.tile, pandas.indexes.category, pandas.core.strings, pandas.indexes.range, pandas.indexes.numeric, pandas.indexes.multi, pandas.tseries.index, pandas.types.missing, pandas.stats.moments, pandas.tools.pivot
+missing module named pandas.types.common.is_float - imported by pandas.types.common, pandas.types.api, pandas.indexes.base, pandas.types.cast, pandas.core.indexing, pandas.tseries.period, pandas.tseries.tdi, pandas.core.nanops, pandas.tseries.base, pandas.tseries.converter, pandas.io.excel, pandas.io.parsers, pandas.sparse.array, pandas.tools.tile, pandas.formats.style, pandas.tseries.index, pandas.formats.format
+missing module named pandas.types.common._ensure_object - imported by pandas.types.common, pandas.tseries.tools, pandas.indexes.base, pandas.types.cast, pandas.tseries.timedeltas, pandas.core.algorithms, pandas.tseries.period, pandas.core.nanops, pandas.core.categorical, pandas.tools.util, pandas.core.ops, pandas.io.parsers, pandas.core.groupby, pandas.io.stata, pandas.tools.merge, pandas.io.pytables, pandas.types.missing
 missing module named sqlalchemy.Numeric - imported by sqlalchemy, pandas.io.sql
 missing module named 'sqlalchemy.types'.to_instance - imported by 'sqlalchemy.types', pandas.io.sql
 missing module named 'sqlalchemy.types'.TypeEngine - imported by 'sqlalchemy.types', pandas.io.sql
@@ -2031,27 +2044,77 @@ missing module named pandas.msgpack._unpacker.unpack - imported by pandas.msgpac
 missing module named pandas.msgpack._unpacker.unpackb - imported by pandas.msgpack._unpacker, pandas.msgpack
 missing module named pandas.msgpack._unpacker.Unpacker - imported by pandas.msgpack._unpacker, pandas.msgpack
 missing module named pandas.msgpack._packer.Packer - imported by pandas.msgpack._packer, pandas.msgpack
-missing module named pandas.sparse.api.SparsePanel - imported by pandas.sparse.api, pandas.io.pytables, pandas.io.packers
 missing module named pandas.tslib.NaTType - imported by pandas.tslib, pandas.io.packers
 missing module named tables - imported by pandas.io.pytables
 missing module named pandas.core.algorithms.match - imported by pandas.core.algorithms, pandas.core.api, pandas.io.pytables
-missing module named boto.key - imported by boto, pandas.io.common
-missing module named boto - imported by pandas.io.common
-missing module named py.local - imported by py, pandas.io.common
-missing module named py - imported by pandas.io.common
-missing module named pandas.core.common.AbstractMethodError - imported by pandas.core.common, pandas.core.base, pandas.tseries.base, pandas.io.common, pandas.core.generic, pandas.io.json, pandas.io.parsers, pandas.core.groupby, pandas.tools.plotting, pandas.io.html
+missing module named oauth2client.service_account.ServiceAccountCredentials - imported by oauth2client.service_account, pandas.io.gbq
+missing module named oauth2client.client.AssertionCredentials - imported by oauth2client.client, oauth2client.service_account, oauth2client.appengine, oauth2client.gce
+missing module named 'six.moves.urllib' - imported by 'six.moves.urllib'
+missing module named 'Crypto.Util'.DerSequence - imported by 'Crypto.Util', oauth2client._pycrypto_crypt
+missing module named 'Crypto.Util' - imported by oauth2client._pycrypto_crypt
+missing module named 'Crypto.Signature'.PKCS1_v1_5 - imported by 'Crypto.Signature', oauth2client._pycrypto_crypt
+missing module named 'Crypto.Signature' - imported by oauth2client._pycrypto_crypt
+missing module named 'Crypto.Hash'.SHA256 - imported by 'Crypto.Hash', oauth2client._pycrypto_crypt
+missing module named 'Crypto.Hash' - imported by oauth2client._pycrypto_crypt
+missing module named Crypto.RSA - imported by Crypto, oauth2client._pycrypto_crypt
+missing module named Crypto - imported by oauth2client._pycrypto_crypt
+missing module named psyco - imported by rsa.transform
+missing module named oauth2client.client.Storage - imported by oauth2client.client, oauth2client.appengine, oauth2client.file
+missing module named oauth2client.client.Credentials - imported by oauth2client.client, oauth2client.appengine, oauth2client.file
+missing module named oauth2client.client.OAuth2WebServerFlow - imported by oauth2client.client, oauth2client.appengine, pandas.io.gbq
+missing module named oauth2client.client.AccessTokenRefreshError - imported by oauth2client.client, oauth2client.appengine, pandas.io.gbq
+missing module named oauth2client.client.HttpAccessTokenRefreshError - imported by oauth2client.client, oauth2client.gce
+missing module named 'google.appengine'.ndb - imported by 'google.appengine', oauth2client.appengine
+missing module named 'google.appengine'.login_required - imported by 'google.appengine', oauth2client.appengine
+missing module named 'google.appengine'.db - imported by 'google.appengine', oauth2client.appengine
+missing module named 'google.appengine'.users - imported by 'google.appengine', oauth2client.appengine
+missing module named 'google.appengine'.memcache - imported by 'google.appengine', oauth2client.appengine, googleapiclient.discovery_cache, googleapiclient.discovery_cache.appengine_memcache
+missing module named 'google.appengine'.app_identity - imported by 'google.appengine', oauth2client.appengine
+missing module named webapp2 - imported by oauth2client.appengine
+missing module named oauth2client.client.Flow - imported by oauth2client.client, oauth2client.appengine
+missing module named 'google.appengine' - imported by httplib2, oauth2client.client, oauth2client.appengine, googleapiclient.discovery_cache, googleapiclient.discovery_cache.appengine_memcache
+missing module named 'google.appengine'.InvalidURLError - imported by 'google.appengine', httplib2
+missing module named 'google.appengine'.fetch - imported by 'google.appengine', httplib2
+missing module named 'apiclient.errors'.HttpError - imported by 'apiclient.errors', pandas.io.gbq
+missing module named 'apiclient.errors' - imported by pandas.io.gbq
+missing module named 'apiclient.discovery'.build - imported by 'apiclient.discovery', pandas.io.gbq
+missing module named 'apiclient.discovery' - imported by pandas.io.gbq
+missing module named googleapiclient.discovery_cache.DISCOVERY_DOC_MAX_AGE - imported by googleapiclient.discovery_cache, googleapiclient.discovery_cache.appengine_memcache, googleapiclient.discovery_cache.file_cache
+missing module named "'six.moves.urllib'.parse".quote - imported by "'six.moves.urllib'.parse", googleapiclient.http
+missing module named "'six.moves.urllib'.parse".unquote - imported by "'six.moves.urllib'.parse", googleapiclient.http
+missing module named "'six.moves.urllib'.parse".urlunparse - imported by "'six.moves.urllib'.parse", googleapiclient.discovery, googleapiclient.http
+missing module named "'six.moves.urllib'.parse".urljoin - imported by "'six.moves.urllib'.parse", googleapiclient.discovery
+missing module named "'six.moves.urllib'.parse".parse_qsl - imported by "'six.moves.urllib'.parse", googleapiclient.discovery
+missing module named "'six.moves.urllib'.parse".urlparse - imported by "'six.moves.urllib'.parse", googleapiclient.discovery, googleapiclient.http
+missing module named "'six.moves.urllib'.parse".urlencode - imported by "'six.moves.urllib'.parse", googleapiclient.discovery, googleapiclient.model
+missing module named "'six.moves.urllib'.parse" - imported by googleapiclient.discovery, googleapiclient.http, googleapiclient.model
+missing module named 'google3.apphosting'.InvalidURLError - imported by 'google3.apphosting', httplib2
+missing module named 'google3.apphosting'.fetch - imported by 'google3.apphosting', httplib2
+missing module named 'google3.apphosting' - imported by httplib2
+missing module named google3.apiproxy_stub_map - imported by google3, httplib2
+missing module named google3 - imported by httplib2
+missing module named google.apiproxy_stub_map - imported by google, httplib2
+missing module named google - imported by httplib2
+missing module named ca_certs_locater - imported by httplib2
+missing module named 'email.FeedParser' - imported by httplib2
+missing module named 'boto.s3'.key - imported by 'boto.s3', pandas.io.s3
+missing module named 'boto.s3' - imported by pandas.io.s3
+missing module named boto - imported by pandas.io.s3
+missing module named pandas.core.common.AbstractMethodError - imported by pandas.core.common, pandas.core.generic, pandas.tseries.base, pandas.tools.plotting, pandas.io.parsers, pandas.io.common, pandas.core.groupby, pandas.io.json, pandas.core.base, pandas.tseries.offsets, pandas.io.html
+missing module named pandas.types.common.is_period - imported by pandas.types.common, pandas.types.api
+missing module named pandas.types.common.is_floating_dtype - imported by pandas.types.common, pandas.types.api
 missing module named pandas.lib.cache_readonly - imported by pandas.lib, pandas.util.decorators
-missing module named pandas.core.algorithms.take_1d - imported by pandas.core.algorithms, pandas.core.strings, pandas.tseries.common, pandas.core.categorical, pandas.util.testing
-missing module named pandas.formats.printing.pprint_thing - imported by pandas.formats.printing, pandas.core.base, pandas.sparse.list, pandas.io.common, pandas.formats.format, pandas.core.internals, pandas.core.generic, pandas.io.json, pandas.core.panel, pandas.io.excel, pandas.core.groupby, pandas.tools.plotting, pandas.tseries.plotting, pandas.io.pytables, pandas.computation.pytables, pandas.computation.ops, pandas.computation.eval, pandas.core.frame, pandas.indexes.base, pandas.indexes.multi, pandas.core.config, pandas.io.html, pandas.util.testing
-missing module named pandas.core.common.is_datetimelike_v_numeric - imported by pandas.core.common, pandas.core.ops, pandas.core.internals, pandas.util.testing
-missing module named pandas.core.common.array_equivalent - imported by pandas.core.common, pandas.core.internals, pandas.indexes.base, pandas.indexes.multi, pandas.util.testing
-missing module named pandas.core.common.is_list_like - imported by pandas.core.common, pandas.tseries.timedeltas, pandas.core.series, pandas.core.ops, pandas.core.frame, pandas.core.indexing, pandas.core.internals, pandas.core.generic, pandas.core.panel, pandas.indexes.base, pandas.core.strings, pandas.indexes.multi, pandas.tseries.common, pandas.core.categorical, pandas.util.testing
-missing module named pandas.core.common.is_sequence - imported by pandas.core.common, pandas.core.frame, pandas.core.categorical, pandas.util.testing
-missing module named pandas.core.common.needs_i8_conversion - imported by pandas.core.common, pandas.core.ops, pandas.io.packers, pandas.indexes.base, pandas.util.testing
-missing module named pandas.core.common.is_number - imported by pandas.core.common, pandas.io.common, pandas.util.testing
-missing module named pandas.core.common._ensure_platform_int - imported by pandas.core.common, pandas.core.reshape
+missing module named pandas.core.algorithms.take_1d - imported by pandas.core.algorithms, pandas.core.categorical, pandas.core.strings, pandas.tseries.common, pandas.types.concat, pandas.util.testing
+missing module named pandas.types.common.is_sequence - imported by pandas.types.common, pandas.types.api, pandas.core.indexing, pandas.core.categorical, pandas.core.frame, pandas.util.testing
+missing module named pandas.types.common.is_datetimelike_v_numeric - imported by pandas.types.common, pandas.core.internals, pandas.core.ops, pandas.types.missing, pandas.util.testing
+missing module named pandas.types.common.is_bool - imported by pandas.types.common, pandas.types.api, pandas.util.validators, pandas.compat.numpy.function, pandas.types.cast, pandas.core.generic, pandas.core.categorical, pandas.io.excel, pandas.core.groupby, pandas.core.window, pandas.tools.merge, pandas.util.testing
+missing module named pandas.types.common.is_list_like - imported by pandas.types.common, pandas.tseries.tools, pandas.core.base, pandas.types.api, pandas.indexes.base, pandas.tseries.timedeltas, pandas.core.algorithms, pandas.core.series, pandas.core.indexing, pandas.core.generic, pandas.tseries.tdi, pandas.tseries.base, pandas.core.internals, pandas.core.categorical, pandas.core.frame, pandas.tools.util, pandas.computation.ops, pandas.core.ops, pandas.tools.plotting, pandas.core.panel, pandas.io.excel, pandas.io.parsers, pandas.core.groupby, pandas.core.reshape, pandas.sparse.array, pandas.core.window, pandas.tools.merge, pandas.indexes.category, pandas.io.pytables, pandas.computation.pytables, pandas.io.sql, pandas.core.strings, pandas.tseries.common, pandas.indexes.multi, pandas.tseries.index, pandas.io.html, pandas.tools.pivot, pandas.util.testing
+missing module named pandas.types.common.needs_i8_conversion - imported by pandas.types.common, pandas.indexes.base, pandas.core.algorithms, pandas.core.generic, pandas.core.frame, pandas.core.ops, pandas.core.window, pandas.tools.merge, pandas.io.packers, pandas.types.missing, pandas.util.testing
+missing module named pandas.types.common.is_number - imported by pandas.types.common, pandas.types.api, pandas.tools.util, pandas.tools.plotting, pandas.io.common, pandas.util.testing
+missing module named pandas.types.common.is_categorical_dtype - imported by pandas.types.common, pandas.types.api, pandas.indexes.base, pandas.types.cast, pandas.core.algorithms, pandas.core.series, pandas.core.indexing, pandas.core.internals, pandas.core.categorical, pandas.core.frame, pandas.core.ops, pandas.core.groupby, pandas.io.stata, pandas.indexes.category, pandas.io.pytables, pandas.io.packers, pandas.core.strings, pandas.tseries.common, pandas.types.concat, pandas.types.missing, pandas.formats.format, pandas.util.testing
+missing module named pandas.types.missing.array_equivalent - imported by pandas.types.missing, pandas.indexes.base, pandas.core.internals, pandas.indexes.category, pandas.io.pytables, pandas.indexes.multi, pandas.util.testing
 missing module named pandas.tools.plotting._plot_klass - imported by pandas.tools.plotting, pandas.tseries.plotting
-missing module named pandas.tools.merge.concat - imported by pandas.tools.merge, pandas.formats.format, pandas.core.panel, pandas.core.groupby, pandas.core.reshape, pandas.tools.plotting, pandas.io.pytables, pandas.io.gbq, pandas.core.frame, pandas.core.series, pandas.core.categorical, pandas.core.base, pandas, pandas.tools.pivot
+missing module named pandas.tools.merge.concat - imported by pandas.tools.merge, pandas.tools.plotting, pandas.core.reshape, pandas.core.groupby, pandas.core.panel, pandas.io.gbq, pandas.core.frame, pandas.core.categorical, pandas.io.pytables, pandas.core.series, pandas.core.base, pandas.formats.format, pandas, pandas.tools.pivot
 missing module named pandas.tools.merge.merge - imported by pandas.tools.merge, pandas.core.frame, pandas
 missing module named pandas.io.sas.saslib.Parser - imported by pandas.io.sas.saslib, pandas.io.sas.sas7bdat
 missing module named 'genshi.core'.END_CDATA - imported by 'genshi.core', html5lib.treewalkers.genshi
@@ -2088,26 +2151,28 @@ missing module named pandas.lib.NaT - imported by pandas.lib, pandas.tseries.api
 missing module named 'scikits.statsmodels' - imported by pandas.stats.ols
 missing module named statsmodels - imported by pandas.stats.ols
 missing module named pandas.stats.interface.ols - imported by pandas.stats.interface, pandas.stats.plm, pandas.stats.api
-missing module named pandas.to_numeric - imported by pandas, pandas.tseries.tools
+missing module named pandas.CategoricalIndex - imported by pandas, pandas.types.concat, pandas.util.testing
 missing module named pandas.get_option - imported by pandas, pandas.io.clipboard
 missing module named pandas.option_context - imported by pandas, pandas.io.clipboard
-missing module named pandas.PeriodIndex - imported by pandas, pandas.io.packers, pandas.util.testing
+missing module named pandas.PeriodIndex - imported by pandas, pandas.io.packers, pandas.core.algorithms, pandas.util.testing
 missing module named pandas.RangeIndex - imported by pandas, pandas.io.packers, pandas.util.testing
 missing module named pandas.Period - imported by pandas, pandas.io.packers
-missing module named pandas.Float64Index - imported by pandas, pandas.io.packers
 missing module named pandas.NaT - imported by pandas, pandas.io.packers
-missing module named pandas.to_timedelta - imported by pandas, pandas.core.groupby, pandas.io.stata, pandas.tseries.tools
-missing module named pandas.concat - imported by pandas, pandas.sparse.frame, pandas.core.groupby
 missing module named pandas.Int64Index - imported by pandas, pandas.io.pytables, pandas.io.packers
 missing module named pandas.Panel4D - imported by pandas, pandas.io.pytables, pandas.util.testing
-missing module named pandas.MultiIndex - imported by pandas, pandas.io.pytables, pandas.io.packers, pandas.core.strings, pandas.util.testing
-missing module named pandas.Index - imported by pandas, pandas.io.pytables, pandas.compat.pickle_compat, pandas.io.packers, pandas.core.strings, pandas.core.algorithms, pandas.core.categorical, pandas.tseries.tools, pandas.util.testing
-missing module named pandas.to_datetime - imported by pandas, pandas.io.json, pandas.core.groupby, pandas.io.stata, pandas.core.common
-missing module named pandas.isnull - imported by pandas, pandas.io.json, pandas.io.stata
+missing module named pandas.Float64Index - imported by pandas, pandas.core.internals, pandas.io.packers
+missing module named pandas.isnull - imported by pandas, pandas.io.json, pandas.io.stata, pandas.io.pytables
+missing module named pandas.concat - imported by pandas, pandas.sparse.frame, pandas.core.groupby, pandas.core.generic
+missing module named pandas.Categorical - imported by pandas, pandas.tools.merge, pandas.io.packers, pandas.types.concat, pandas.types.common, pandas.types.missing, pandas.util.testing
+missing module named pandas.Timedelta - imported by pandas, pandas.tools.merge
+missing module named pandas.MultiIndex - imported by pandas, pandas.tools.merge, pandas.io.pytables, pandas.io.packers, pandas.core.strings, pandas.util.testing
+missing module named pandas.Index - imported by pandas, pandas.core.categorical, pandas.tools.merge, pandas.compat.pickle_compat, pandas.io.pytables, pandas.io.packers, pandas.core.strings, pandas.core.algorithms, pandas.types.concat, pandas.core.base, pandas.tseries.tools, pandas.util.testing
+missing module named pandas.DatetimeIndex - imported by pandas, pandas.tseries.tdi, pandas.core.missing, pandas.io.stata, pandas.io.packers, pandas.core.algorithms, pandas.util.testing
 missing module named pandas.Timestamp - imported by pandas, pandas.tseries.tdi, pandas.io.packers
-missing module named pandas.Panel - imported by pandas, pandas.core.indexing, pandas.io.pytables, pandas.core.window, pandas.io.packers, pandas.util.testing
-missing module named pandas.DataFrame - imported by pandas, pandas.core.indexing, pandas.tseries.tdi, pandas.io.json, pandas.io.pytables, pandas.core.window, pandas.tools.plotting, pandas.io.packers, pandas.io.clipboard, pandas.core.generic, pandas.core.strings, pandas.core.base, pandas.tseries.tools, pandas.tools.pivot, pandas.util.testing
-missing module named pandas.DatetimeIndex - imported by pandas, pandas.core.missing, pandas.tseries.tdi, pandas.io.packers, pandas.io.stata, pandas.core.algorithms, pandas.util.testing
+missing module named pandas.Panel - imported by pandas, pandas.core.indexing, pandas.core.window, pandas.io.pytables, pandas.io.packers, pandas.util.testing
+missing module named pandas.DataFrame - imported by pandas, pandas.core.indexing, pandas.tseries.tdi, pandas.tools.merge, pandas.tools.plotting, pandas.core.window, pandas.io.json, pandas.io.pytables, pandas.io.packers, pandas.io.clipboard, pandas.core.generic, pandas.core.strings, pandas.core.base, pandas.tseries.tools, pandas.tools.pivot, pandas.util.testing
+missing module named pandas.to_numeric - imported by pandas, pandas.types.cast, pandas.tseries.tools
+missing module named pandas.to_timedelta - imported by pandas, pandas.types.cast, pandas.core.groupby, pandas.io.stata, pandas.tseries.tools
 missing module named pandas.TimedeltaIndex - imported by pandas, pandas.tseries.timedeltas, pandas.core.algorithms, pandas.tseries.index, pandas.util.testing
-missing module named pandas.Series - imported by pandas, pandas.core.common, pandas.tseries.timedeltas, pandas.core.missing, pandas.core.indexing, pandas.formats.format, pandas.io.json, pandas.io.pytables, pandas.core.window, pandas.tools.plotting, pandas.io.packers, pandas.core.generic, pandas.indexes.multi, pandas.indexes.base, pandas.tseries.common, pandas.core.algorithms, pandas.core.categorical, pandas.tseries.index, pandas.tseries.tools, pandas.io.html, pandas.tools.pivot, pandas.util.testing
-missing module named pandas.Categorical - imported by pandas, pandas.core.common, pandas.io.packers
+missing module named pandas.Series - imported by pandas, pandas.tseries.timedeltas, pandas.core.indexing, pandas.core.missing, pandas.tools.merge, pandas.tools.plotting, pandas.core.window, pandas.io.json, pandas.core.categorical, pandas.io.pytables, pandas.io.packers, pandas.core.generic, pandas.tseries.common, pandas.core.algorithms, pandas.types.concat, pandas.indexes.multi, pandas.indexes.base, pandas.tseries.index, pandas.tseries.tools, pandas.types.missing, pandas.formats.format, pandas.io.html, pandas.tools.pivot, pandas.util.testing
+missing module named pandas.to_datetime - imported by pandas, pandas.types.cast, pandas.core.groupby, pandas.io.json, pandas.io.stata, pandas.core.generic

@@ -4,7 +4,7 @@ block_cipher = None
 
 
 a = Analysis(['forTR_ver3.py'],
-             pathex=['C:\\Users\\pc688\\Desktop\\forTR'],
+             pathex=['D:\\Google Drive\\51-\xa4\xa4\xbf\xb3\xb4\xfa\xb6q\\Self_IMU\\Tunnel_Calculator'],
              binaries=None,
              datas=None,
              hiddenimports=[],
