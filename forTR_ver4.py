@@ -4,20 +4,16 @@
 # Email  : m7807031@gmail.com
 
 import pandas as pd
-from numpy import abs, rad2deg,deg2rad, arctan, pi, linspace
+import numpy as np
+from scipy import optimize
 import xlrd, os
-from time import sleep
+from time import sleep, time
 import matplotlib.pyplot as plt
 import FileDialog
 
 
-
-
-
 #===== helper func. =====
-
-#draw opening
-def draw_parsley_2(t=0.05):
+def draw_parsley_ver4(t=0.05):
     print "              " *2 + "  " + "  _  " + "  " + "              " *2
     sleep(t)
     print "     _/\_     " *2 + "  " + " |_| " + "  " + "     _/\_     " *2
@@ -37,15 +33,24 @@ def draw_parsley_2(t=0.05):
     sleep(t)
     print u"        = = = = = = = = = = = = = = = = = = = = = = = = = = =        "
 
-def sausage_print():
-    print "  _  "
-    print " |_| "
-    print " |:| "
-    print " |:| "
-    print " \:/ "
-    print "  |  "
+def draw_parsley_ver3(t=0.05):
+    print "     _/\_     " *5
+    sleep(t)
+    print "   __\  /__   " *5
+    sleep(t)
+    print "  <_      _>  " *5
+    sleep(t)
+    print "    |/ )\|    " *5
+    sleep(t)
+    print "      /       " *5
+    sleep(t)
+    print u"        = = = = = = = = = = = = = = = = = = = = = = = = = = =        "
+    sleep(t)
+    print u"        ||               香菜轉檔 version 4.0               ||        "
+    sleep(t)
+    print u"        = = = = = = = = = = = = = = = = = = = = = = = = = = =        "
 
-def draw_parsley(t=0.05):
+def draw_parsley_ver2(t=0.05):
     #===== draw terminal =====
     print u"                               .k.                                     "
     sleep(t)
@@ -107,16 +112,44 @@ def read_dir_file(path):
         count += 1
         calc_r_and_theta_from_file(path.rstrip().rstrip()+ "\\" + f)
         transfrom_single_file(path.rstrip().rstrip()+ "\\" + f)
-        print u"第 %d 筆檔案完成。" %count
+        print u"第 %d 筆檔案完成." %count
     return
 
 
-def read_no_title_data(file_name):
-    print u"讀取原始檔案..."
-    ori_f = pd.read_excel(file_name, header=None)
-    print ori_f.head()
-    
+def circle_fit(lidar_abs_e_arr, lidar_abs_n_arr):
+    def calc_R(x,y, xc, yc):
+        """ calculate the distance of each 2D points from the center (xc, yc) """
+        return np.sqrt((x-xc)**2 + (y-yc)**2)
 
+    def f(c, x, y):
+        """ calculate the algebraic distance between the data points and the mean circle centered at c=(xc, yc) """
+        Ri = calc_R(x, y, *c)
+        return Ri - Ri.mean()
+
+    def leastsq_circle(x,y):
+        # coordinates of the barycenter
+        x_m = np.mean(x)
+        y_m = np.mean(y)
+        center_estimate = x_m, y_m
+        center, ier = optimize.leastsq(f, center_estimate, args=(x,y))
+        xc, yc = center
+        Ri       = calc_R(x, y, *center)
+        R        = Ri.mean()
+        residu   = np.sum((Ri - R)**2)
+        return xc, yc, R, residu
+
+    xc,yc,R,residu = leastsq_circle(lidar_abs_e_arr, lidar_abs_n_arr)
+
+    return xc,yc,R,residu
+
+
+def read_no_title_data_and_generate_center_file(file_name):
+    ori_f = pd.read_excel(file_name, header=None)
+    new_df = pd.DataFrame({'lidar_e': ori_f[0],'lidar_n': ori_f[1],'lidar_z': ori_f[2]})
+
+    xc,yc,R,residu  = circle_fit(new_df['lidar_e'], new_df['lidar_n'])
+
+    print xc,yc
 
 def calc_r_and_theta_from_file(file_name):
     print u"讀取原始檔案..."
@@ -124,7 +157,7 @@ def calc_r_and_theta_from_file(file_name):
     print u"計算角度與半徑..."
 
     data_length = len(ori_f["lidar_e"])
-    print u"共 %d 筆資料準備計算。"%(data_length)
+    print u"共 %d 筆資料準備計算."%(data_length)
 
     tunnel_e = ori_f['tunnel_e'][0]
     tunnel_n = ori_f['tunnel_n'][0]
@@ -132,53 +165,89 @@ def calc_r_and_theta_from_file(file_name):
 
     r_theta_dict = {'radius':[float(i) for i in range(data_length)], 'theta':[float(i) for i in range(data_length)]}
     r_theta_df = pd.DataFrame(r_theta_dict)
+    #print r_theta_df.head()
+    # create dataframe likes:
+    #      redius     theta
+    # 0      0.0       0.0
+    # 1      1.0       1.0
+    # 2      2.0       2.0
 
+    print u"計算 radius...."
+    # 計算對應 index 的 radius
     r_theta_df['radius'] = (    (ori_f['lidar_e'] - tunnel_e)**2  +  (ori_f['lidar_n'] - tunnel_n)**2     )   ** 0.5
+    #print r_theta_df.head()
+    # enter dataframe likes:
+    #      radius  theta
+    # 0  5.425958    0.0
+    # 1  5.442800    1.0
+    # 2  5.438896    2.0
+    # 3  5.439481    3.0
+    print u"radius 計算完畢."
 
 
+    print u"計算 theta..."
     for i in range(data_length):
-        if i%10000 ==0: print u"共 %d 筆完成，尚餘%d筆。"% (i, data_length-i)
-        x = abs(ori_f['lidar_e'][i] - tunnel_e)
-        y = abs(ori_f['lidar_n'][i] - tunnel_n)
-        r = r_theta_df['radius'][i]
+        if i%10000 ==0: print u"共 %d 筆完成尚餘 %d 筆."% (i, data_length-i)
 
-        try:
-            i_theta = rad2deg(arctan(y/x))
-        except:
-            print "error index: %d" %(i)
-            print "error num: %.6f  %.6f" %(x, y)
-            print "=========="
-            #i_theta = "nan"
+        x = float(ori_f['lidar_e'][i] - tunnel_e)
+        y = float(ori_f['lidar_n'][i] - tunnel_n)
+        r = float(r_theta_df['radius'][i])
+
+
+
+        if x == 0 and y ==0: # 點雲為圓心
+            r_theta_df['theta'][i] = 'nan'
+
+        elif x == 0 and y > 0: # x=0 y>0
+            r_theta_df['theta'][i] = 0
+
+        elif x == 0 and y < 0: # x=0 y<0
+            r_theta_df['theta'][i] = 180
+
+        elif x > 0 and y== 0: # x>0 y=0
+            r_theta_df['theta'][i] = 90
+
+        elif x < 0 and y == 0: # x<0 y=0
+            r_theta_df['theta'][i] = 270
 
         # 1st quadrant
-        if ori_f['lidar_e'][i]-tunnel_e > 0 and ori_f['lidar_n'][i]-tunnel_n >0:
+        elif x > 0 and y > 0:
+            i_theta = np.rad2deg(np.arctan(np.abs(y)/np.abs(x)))
             r_theta_df['theta'][i] = 90 - i_theta
 
         # 2nd quadrant
-        elif ori_f['lidar_e'][i]-tunnel_e > 0 and ori_f['lidar_n'][i]-tunnel_n <0:
+        elif x > 0 and y < 0:
+            i_theta = np.rad2deg(np.arctan(np.abs(y)/np.abs(x)))
             r_theta_df['theta'][i] = i_theta + 90.0
 
         # 3rd quadrant
-        elif ori_f['lidar_e'][i]-tunnel_e < 0 and ori_f['lidar_n'][i]-tunnel_n <0:
+        elif x < 0 and y < 0:
+            i_theta = np.rad2deg(np.arctan(np.abs(y)/np.abs(x)))
             r_theta_df['theta'][i] = (90- i_theta) + 180.0
 
         # 4th quadrant
-        elif ori_f['lidar_e'][i]-tunnel_e < 0 and ori_f['lidar_n'][i]-tunnel_n >0:
+        elif x < 0 and y > 0:
+            i_theta = np.rad2deg(np.arctan(np.abs(y)/np.abs(x)))
             r_theta_df['theta'][i] = i_theta +270.0
 
         else:
-            print "Quadrant Error!"
-
+            print "data error %s: row %d can't be classify by quadrant, deg=nan." %(file_name, i+2)
+            r_theta_df['theta'][i] = i_theta
+            with open("Error_Log.txt","a+") as err_log:
+                err_log.write("Data Error %s: row %d can't be classify by quadrant, deg=nan.\n" %(file_name, i+2))
+    print u"theta 計算完畢."
 
     df_all =  pd.concat([ori_f,r_theta_df], axis=1)
 
-    df_all.to_csv('%s_RESULT.csv' %file_name, index=False)
+    print u"_RESULT.csv 產出."
+    df_all.to_csv('%s_RESULT.csv' %file_name.rstrip(), index=False)
     return
 
+
 def transfrom_single_file(file_name):
-    print u"角度對應半徑計算中..."
+    print u"計算每一度的平均半徑..."
     #===== open file =====
-    ori_f = pd.read_csv('%s_RESULT.csv' %file_name)
+    ori_f = pd.read_csv('%s_RESULT.csv' %file_name.rstrip())
 
     #===== variable =====
     data_len = ori_f["radius"].size
@@ -194,9 +263,10 @@ def transfrom_single_file(file_name):
         try:
             now_theta = int(round(ori_f[u'theta'][i]))
         except:
-            print u"!!檔案缺失!! %s =>缺失於第%d列" %(file_name, i+1)
-            with open("Error_Log.txt","a+"):
-                print u"!!檔案缺失!! %s =>缺失於第%d列" %(file_name, i+2)
+            print u"!!DATA MISSING!!%s: missing at row %d " %(file_name, i+2)
+            with open("Error_Log.txt","a+") as err_log:
+                print >>err_log, u"!!DATA MISSING!!%s: missing at row %d " %(file_name, i+2)
+            continue
 
         if now_theta ==360:
             data_dict['0'].append(ori_f['radius'][i])
@@ -205,37 +275,41 @@ def transfrom_single_file(file_name):
 
     for key in data_dict:
         if len(data_dict[key]) ==0:
-            deg_avg = 'nan'
+            deg_meanR = 'nan'
         else:
-            deg_avg = float(sum(data_dict[key])/len(data_dict[key]))
+            deg_meanR = float(sum(data_dict[key])/len(data_dict[key]))
 
-        arr.append([int(key), int(len(data_dict[key])), float(deg_avg)])
+        arr.append([int(key), int(len(data_dict[key])), float(deg_meanR)])
 
     deg = [i[0] for i in arr]
     num = [i[1] for i in arr]
-    deg_avg =[i[2] for i in arr]
+    deg_meanR =[i[2] for i in arr]
 
-    df = pd.DataFrame({'deg': deg, 'num': num, 'deg_avg': deg_avg})
+    df = pd.DataFrame({'deg': deg, 'num': num, 'deg_meanR': deg_meanR})
     sorted_df = df.sort_values(by='deg')
-    print u"計算完畢。"
+    print u"平均半徑計算完畢."
+
+    #print sorted_df.head()
+
+    sorted_df.loc[sorted_df['num'] <=10, 'deg_meanR' ] = ''
 
     new_fn = file_name
-    sorted_df.to_csv('%s_ANSWER.csv' %new_fn, index=False)
-    print u"檔案輸出完畢"
+    sorted_df.to_csv('%s_ANSWER.csv' %new_fn.rstrip(), index=False)
+    print u"_ANSWER.CSV 產出."
     return
 
 
 def plot_or_not(file_name):
     answer_data = pd.read_csv(file_name.rstrip())
 
-    theta = deg2rad(answer_data['deg'] )
-    radii = answer_data['deg_avg']
+    theta = np.np.deg2rad(answer_data['deg'] )
+    radii = answer_data['deg_meanR']
 
     ax = plt.subplot(111, projection='polar')
     ax.plot(theta, radii, color='r', linewidth='3')
     ax.grid(True)
     ax.set_rmax(6.0)
-    ax.set_rmin(5.0)
+    ax.set_rmin(4.0)
     ax.set_theta_zero_location('N')
     ax.set_theta_direction('clockwise')
 
@@ -247,7 +321,7 @@ def main():
     STATUS_KEY = -1
     # -1=> 剛啟動; 1=>輸入為檔案; 2=> 輸入為資料夾 ;
 
-    draw_parsley_2()
+    draw_parsley_ver4()
 
     while 1:
         read_input_path = raw_input(u"Input File dir or name: ")
@@ -258,38 +332,42 @@ def main():
             break
 
         elif os.path.isdir(read_input_path):
-            print u"取得資料夾位置，進行批次處理作業。"
+            print u"取得資料夾位置,進行批次處理作業."
             STATUS_KEY = 2
             break
         elif os.path.isfile(read_input_path):
-            print u"取得檔案位置，進行單一檔案轉換。"
+            print u"取得檔案位置,進行單一檔案轉換."
             STATUS_KEY = 1
             break
 
         else:
-            print u"輸入錯誤，請重新選擇。"
+            print u"輸入錯誤,請重新選擇."
             continue
 
     if STATUS_KEY == 1:
         print u"計算中..."
-        read_no_title_data(read_input_path)
+        read_no_title_data_and_generate_center_file(read_input_path)
+
         #calc_r_and_theta_from_file(read_input_path)
         #transfrom_single_file(read_input_path)
-        print u"完成。"
+        print u"完成."
 
 
     elif STATUS_KEY == 2:
         read_dir_file(read_input_path)
-        print u"全部完成。"
+        print u"全部完成."
 
     elif STATUS_KEY == 9:
-        draw_data_name = raw_input("Input plot file: ")
-        plot_or_not(draw_data_name)
-        print u"完成。"
+        draw_data_name = raw_input("Input _ANSWER.csv file: ")
+        try:
+            plot_or_not(draw_data_name)
+            print u"完成."
+        except:
+            print u"檔案錯誤，處罰你等待 3 秒，你好好思考人生吧！"
+            sleep(3)
+            exit()
+
     else:
         print "Error operation!"
 
-
-
-if __name__ == "__main__":
-    main()
+if __name__ == "__main__": main()
