@@ -101,7 +101,6 @@ def draw_parsley_ver2(t=0.05):
     print u"          = = = = = = = = = = = = = = = = = = = = = = = = = = =        "
     sleep(t)
 
-
 def read_dir_file(path):
     print u"共 %d 筆檔案" % len(os.listdir(path.rstrip()))
     count = 0
@@ -110,6 +109,7 @@ def read_dir_file(path):
 
     for f in os.listdir(path.rstrip()):
         count += 1
+        read_no_title_data_and_generate_center_file(path.rstrip().rstrip()+ "\\" + f)
         calc_r_and_theta_from_file(path.rstrip().rstrip()+ "\\" + f)
         transfrom_single_file(path.rstrip().rstrip()+ "\\" + f)
         print u"第 %d 筆檔案完成." %count
@@ -144,16 +144,34 @@ def circle_fit(lidar_abs_e_arr, lidar_abs_n_arr):
 
 
 def read_no_title_data_and_generate_center_file(file_name):
+    print u"讀取無標題檔案..."
     ori_f = pd.read_excel(file_name, header=None)
-    new_df = pd.DataFrame({'lidar_e': ori_f[0],'lidar_n': ori_f[1],'lidar_z': ori_f[2]})
+    new_df = pd.DataFrame({"lidar_e": ori_f[0],"lidar_n": ori_f[1],"lidar_z": ori_f[2]})
 
-    xc,yc,R,residu  = circle_fit(new_df['lidar_e'], new_df['lidar_n'])
+    new_df_lenth = new_df["lidar_e"].size
 
-    print xc,yc
+    if new_df_lenth >= 10000:
+        fit_len = 10000
+    else:
+        fit_len = new_df_lenth
+
+    # 取全部裡面隨機數量的點雲
+    lidar_for_fit = new_df.sample(n=fit_len)
+    tunnel_z = lidar_for_fit['lidar_z'].mean()
+
+    print u"計算擬合圓心中..."
+    xc,yc,R,residu  = circle_fit(lidar_for_fit['lidar_e'], lidar_for_fit['lidar_n'])
+
+    center_df = pd.DataFrame({'tunnel_e': xc, 'tunnel_n':yc, 'tunnel_z': tunnel_z},index=[0])
+    print u"擬合圓心計算完成."
+    all_df = pd.concat([new_df,center_df], axis=1)
+
+    all_df.to_csv('%s_FIT.csv' %file_name.rstrip(),index=False)
+    print u"_FIT.csv 產出."
 
 def calc_r_and_theta_from_file(file_name):
-    print u"讀取原始檔案..."
-    ori_f = pd.read_excel(file_name)
+    print u"_FITcsv 檔案讀取中..."
+    ori_f = pd.read_csv('%s_FIT.csv' %file_name.rstrip())
     print u"計算角度與半徑..."
 
     data_length = len(ori_f["lidar_e"])
@@ -347,9 +365,8 @@ def main():
     if STATUS_KEY == 1:
         print u"計算中..."
         read_no_title_data_and_generate_center_file(read_input_path)
-
-        #calc_r_and_theta_from_file(read_input_path)
-        #transfrom_single_file(read_input_path)
+        calc_r_and_theta_from_file(read_input_path)
+        transfrom_single_file(read_input_path)
         print u"完成."
 
 
@@ -363,7 +380,7 @@ def main():
             plot_or_not(draw_data_name)
             print u"完成."
         except:
-            print u"檔案錯誤，處罰你等待 3 秒，你好好思考人生吧！"
+            print u"檔案錯誤，處罰你等待 3 秒，好好思考人生吧！"
             sleep(3)
             exit()
 
