@@ -219,7 +219,7 @@ def calc_r_and_theta_from_file(file_name, center_file_name): #讀取 純點雲�
 
     print u"計算 theta..."
     for i in range(data_length):
-        if i%10000 ==0: print u"共 %d 筆完成尚餘 %d 筆."% (i, data_length-i)
+        if i%10000 ==0: print u"共 %d 筆完成,尚餘 %d 筆."% (i, data_length-i)
 
         x = float(ori_f['lidar_e'][i] - tunnel_e)
         y = float(ori_f['lidar_n'][i] - tunnel_n)
@@ -350,7 +350,7 @@ def plot_or_not(file_name):
 def plot_replacement(file_name):
     answer_data = pd.read_csv(file_name.rstrip())
     theta = np.deg2rad(answer_data['deg'])
-    radii = answer_data['deg_meanR'] 
+    radii = answer_data['deg_meanR']
 
 
     fig = plt.figure()
