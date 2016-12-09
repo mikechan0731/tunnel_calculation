@@ -6,7 +6,7 @@
 import pandas as pd
 import numpy as np
 from scipy import optimize
-import xlrd, os
+import xlrd, os, sys, locale
 from time import sleep, time
 import matplotlib.pyplot as plt
 import FileDialog
@@ -101,7 +101,7 @@ def draw_parsley_ver2(t=0.05):
     print u"          = = = = = = = = = = = = = = = = = = = = = = = = = = =        "
     sleep(t)
 
-def read_dir_file(path):
+def read_dir_file(path): #讀取指定目標資料夾內所有檔案名稱並產出RESULT 和 ANSWER
     print u"共 %d 筆檔案" % len(os.listdir(path.rstrip()))
     count = 0
 
@@ -116,7 +116,7 @@ def read_dir_file(path):
     return
 
 
-def circle_fit(lidar_abs_e_arr, lidar_abs_n_arr):
+def circle_fit(lidar_abs_e_arr, lidar_abs_n_arr): #給予 點雲 XY座標 產出擬合圓心
     def calc_R(x,y, xc, yc):
         """ calculate the distance of each 2D points from the center (xc, yc) """
         return np.sqrt((x-xc)**2 + (y-yc)**2)
@@ -143,7 +143,7 @@ def circle_fit(lidar_abs_e_arr, lidar_abs_n_arr):
     return xc,yc,R,residu
 
 
-def read_no_title_data_and_generate_center_file(file_name):
+def read_no_title_data_and_generate_center_file(file_name): # 讀取 純點雲資料 產出 圓心檔案 _CENTER
     print u"計算擬合圓心開始."
     ori_f = pd.read_excel(file_name, header=None)
     new_df = pd.DataFrame({"lidar_e": ori_f[0],"lidar_n": ori_f[1],"lidar_z": ori_f[2]})
@@ -169,17 +169,31 @@ def read_no_title_data_and_generate_center_file(file_name):
     center_df.to_csv('%s_CENTER.csv' %file_name.rstrip(),index=False)
     print u"_CENTER.csv 產出."
 
-def calc_r_and_theta_from_file(file_name):
-    print u"無檔頭檔案讀取中..."
-    ori_f = pd.read_csv('%s' %file_name.rstrip())
-    print u"計算角度與半徑..."
 
+def calc_r_and_theta_from_file(file_name, center_file_name): #讀取 純點雲資料 和 圓心資料 產出 帶檔頭的 _RESULT
+    print u"純點雲檔案讀取中..."
+
+    if file_name.rstrip().endswith(".xlsx"):
+        ori_f = pd.read_excel('%s' %file_name.rstrip(), header=None)
+    elif file_name.rstrip().endswith(".csv"):
+        ori_f = pd.read_csv('%s' %file_name.rstrip(), header=None)
+    else:
+        ori_f = pd.DataFrame({'a':[1,2,3]})
+
+    ori_f = ori_f.rename(columns={0:'lidar_e', 1:'lidar_n', 2:'lidar_z'})
+
+
+    print u"圓心檔案讀取中..."
+    center_f = pd.read_csv(center_file_name)
+
+
+    print u"計算角度與半徑..."
     data_length = len(ori_f["lidar_e"])
     print u"共 %d 筆資料準備計算."%(data_length)
 
-    tunnel_e = ori_f['tunnel_e'][0]
-    tunnel_n = ori_f['tunnel_n'][0]
-    tunnel_z = ori_f['tunnel_z'][0]
+    tunnel_e = center_f['tunnel_e'][0]
+    tunnel_n = center_f['tunnel_n'][0]
+    tunnel_z = center_f['tunnel_z'][0]
 
     r_theta_dict = {'radius':[float(i) for i in range(data_length)], 'theta':[float(i) for i in range(data_length)]}
     r_theta_df = pd.DataFrame(r_theta_dict)
@@ -255,7 +269,7 @@ def calc_r_and_theta_from_file(file_name):
                 err_log.write("Data Error %s: row %d can't be classify by quadrant, deg=nan.\n" %(file_name, i+2))
     print u"theta 計算完畢."
 
-    df_all =  pd.concat([ori_f,r_theta_df], axis=1)
+    df_all =  pd.concat([ori_f,center_f, r_theta_df], axis=1)
 
     print u"_RESULT.csv 產出."
     df_all.to_csv('%s_RESULT.csv' %file_name.rstrip(), index=False)
@@ -320,7 +334,7 @@ def transfrom_single_file(file_name):
 def plot_or_not(file_name):
     answer_data = pd.read_csv(file_name.rstrip())
 
-    theta = np.np.deg2rad(answer_data['deg'] )
+    theta = np.deg2rad(answer_data['deg'])
     radii = answer_data['deg_meanR']
 
     ax = plt.subplot(111, projection='polar')
@@ -333,60 +347,113 @@ def plot_or_not(file_name):
 
     plt.show()
 
+def plot_replacement(file_name):
+    answer_data = pd.read_csv(file_name.rstrip())
+    theta = np.deg2rad(answer_data['deg'])
+    radii = answer_data['deg_meanR'] 
+
+
+    fig = plt.figure()
+    fig.subplots_adjust(top=0.87)
+    fig.suptitle("Tunnel_z", fontsize=14, fontweight="bold")
+    ax = fig.add_subplot(111, projection='polar')
+    #template variable
+
+
+    theta_360 = np.deg2rad(np.arange(360))
+    r0 = np.array([0 for i in range(360)])
+    r_break_max = np.array([15 for i in range(360)])
+    r_break_min = np.array([-15 for i in range(360)])
+
+
+
+    #標準指示圓
+    ax.plot(theta_360, r0, 'k', linewidth='2')
+    ax.plot(theta_360, r_break_max, 'y', linewidth='2')
+    ax.plot(theta_360, r_break_min, 'y', linewidth='2')
+    ax.plot()
+
+
+    ax.plot(theta, radii, color='r', linewidth='3')
+
+
+    ax.grid(False)
+    ax.set_rmax(30)
+    ax.set_rmin(-30)
+
+
+    ax.set_theta_zero_location('N')
+    ax.set_theta_direction('clockwise')
+
+    plt.show()
+
 
 #===== main =====
 def main():
-    STATUS_KEY = False
-    CENTER_KEY = False
-
-
+    STATUS_KEY = 0
+    CENTER_KEY = 0
     draw_parsley_ver4()
 
     while 1:
-        read_input_file = raw_input(u"輸入點雲檔案(無標頭): ")
-        if os.path.isfile(read_input_path) and str(read_input_file).rstrip().endswith(".xlsx"):
-            print u"點雲檔案正確."
-            STATUS_KEY = True
+        read_input_file = raw_input(u"Enter lidar file without header: ").rstrip()
 
-            read_center_file = raw_input(u"輸入圓心檔案(若沒有輸入則自動產出圓心檔案): ")
-            if os.path.isfile(read_input_path) and str(read_input_file).rstrip().endswith("_CENTER.CSV"):
-                print u"圓心檔案正確."
-                CENTER_KEY = True
-                break
-            elif read_center_file.rstrip() == "" :
-                print u"無圓心檔案,自動產出圓心檔."
-                CENTER_KEY = False
-                break
+        if read_input_file == "pp":
+            STATUS_KEY = 6
+            break
+
+        elif os.path.isfile(read_input_file) and str(read_input_file).rstrip().endswith(".xlsx"):
+            print u"點雲檔案正確."
+            STATUS_KEY =1
+
+            while 1:
+                read_center_file = raw_input(u"Enter center file(if not, I will generate one): ")
+                if str(read_center_file).rstrip().endswith("_CENTER.csv"):
+                    print u"圓心檔案正確."
+                    CENTER_KEY = 1
+                    break
+                elif read_center_file.rstrip() == "" :
+                    print u"無圓心檔案,自動產出圓心檔."
+                    CENTER_KEY = 0
+                    break
+                else:
+                    print u"圓心檔案輸入錯誤，請重新輸入"
+                    continue
+            break
         else:
             print u"檔案錯誤,請重新輸入檔案."
             continue
 
 
-    # 尚未處理完成 
-    if STATUS_KEY == 1:
-        print u"計算中..."
-        read_no_title_data_and_generate_center_file(read_input_path)
-        #calc_r_and_theta_from_file(read_input_path)
-        #transfrom_single_file(read_input_path)
+    if STATUS_KEY == 1 and CENTER_KEY== 1:
+        print u"使用指定圓心檔案產出 _RESULT 與 _ANSWER"
+        calc_r_and_theta_from_file(read_input_file, read_center_file)
+        transfrom_single_file(read_input_file)
         print u"完成."
 
+    elif STATUS_KEY == 1 and CENTER_KEY == 0:
+        print u"使用檔案產出擬合圓心檔案_CENTER."
+        read_no_title_data_and_generate_center_file(read_input_file)
+        #print u"使用檔案產出_CENTER, _RESULT 與 _ANSWER"
+        print u"完成."
 
-    elif STATUS_KEY == 2:
-        read_dir_file(read_input_path)
-        print u"全部完成."
-
-    elif STATUS_KEY == 9:
+    elif STATUS_KEY==6:
+        print u"繪圖模式開啟"
         draw_data_name = raw_input("Input _ANSWER.csv file: ")
+        #plot_or_not(draw_data_name.rstrip())
+        plot_replacement(draw_data_name.rstrip())
+
+        '''
         try:
-            plot_or_not(draw_data_name)
+            plot_or_not(draw_data_name.rstrip())
             print u"完成."
         except:
             print u"檔案錯誤，處罰你等待 3 秒，好好思考人生吧！"
             sleep(3)
-            exit()
-
+        '''
     else:
-        print "Error operation!"
+        print u"執行錯誤, 請重新輸入."
+
+
 
 
 
