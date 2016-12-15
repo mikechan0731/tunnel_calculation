@@ -341,7 +341,7 @@ def plot_or_not(file_name):
     ax.plot(theta, radii, color='r', linewidth='3')
     ax.grid(True)
     ax.set_rmax(6.0)
-    ax.set_rmin(4.0)
+    ax.set_rmin(5.0)
     ax.set_theta_zero_location('N')
     ax.set_theta_direction('clockwise')
 
@@ -357,9 +357,8 @@ def plot_replacement(file_name):
     fig.subplots_adjust(top=0.87)
     fig.suptitle("Tunnel_z", fontsize=14, fontweight="bold")
     ax = fig.add_subplot(111, projection='polar')
+
     #template variable
-
-
     theta_360 = np.deg2rad(np.arange(360))
     r0 = np.array([0 for i in range(360)])
     r_break_max = np.array([15 for i in range(360)])
@@ -368,9 +367,9 @@ def plot_replacement(file_name):
 
 
     #標準指示圓
-    ax.plot(theta_360, r0, 'k', linewidth='2')
-    ax.plot(theta_360, r_break_max, 'y', linewidth='2')
-    ax.plot(theta_360, r_break_min, 'y', linewidth='2')
+    ax.plot(theta_360, r0, 'g', linewidth='4')
+    ax.plot(theta_360, r_break_max, 'y', linewidth='4')
+    ax.plot(theta_360, r_break_min, 'y', linewidth='4')
     ax.plot()
 
 
@@ -380,10 +379,15 @@ def plot_replacement(file_name):
     ax.grid(False)
     ax.set_rmax(30)
     ax.set_rmin(-30)
-
-
+    #ax.set_rgrids([7.5, 15, 22.5, 30, 37.5,],angle=0.)
+    ax.set_xticks(np.pi/180. * np.linspace(0.0,  360.0, 16, endpoint=False))
+    ax.set_yticks([-30,-22.5,-15,-7.5,0, 7.5, 15, 22.5, 30])
     ax.set_theta_zero_location('N')
     ax.set_theta_direction('clockwise')
+    ax.set_xticklabels(['0', '22.5', '45', '67.5', '90', '112.5', '135', '157.5', '180',
+                        '202.5', '225', '247.5', '270', '292.5', '315', '337.5'])
+
+
 
     plt.show()
 
