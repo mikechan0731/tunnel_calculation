@@ -162,13 +162,12 @@ def read_no_title_data_and_generate_center_file(file_name): # 讀取 純點雲�
     print u"計算擬合圓心中..."
     xc,yc,R,residu  = circle_fit(lidar_for_fit['lidar_e'], lidar_for_fit['lidar_n'])
 
-    center_df = pd.DataFrame({'tunnel_e': xc, 'tunnel_n':yc, 'tunnel_z': tunnel_z},index=[0])
+    center_df = pd.DataFrame({'tunnel_e': xc, 'tunnel_n':yc, 'tunnel_z': tunnel_z}, index=[0])
     print u"擬合圓心計算完成."
     #all_df = pd.concat([new_df,center_df], axis=1)
 
     center_df.to_csv('%s_CENTER.csv' %file_name.rstrip(),index=False)
     print u"_CENTER.csv 產出."
-
 
 def calc_r_and_theta_from_file(file_name, center_file_name): #讀取 純點雲資料 和 圓心資料 產出 帶檔頭的 _RESULT
     print u"純點雲檔案讀取中..."
@@ -267,6 +266,7 @@ def calc_r_and_theta_from_file(file_name, center_file_name): #讀取 純點雲�
             r_theta_df['theta'][i] = i_theta
             with open("Error_Log.txt","a+") as err_log:
                 err_log.write("Data Error %s: row %d can't be classify by quadrant, deg=nan.\n" %(file_name, i+2))
+
     print u"theta 計算完畢."
 
     df_all =  pd.concat([ori_f,center_f, r_theta_df], axis=1)
@@ -274,7 +274,6 @@ def calc_r_and_theta_from_file(file_name, center_file_name): #讀取 純點雲�
     print u"_RESULT.csv 產出."
     df_all.to_csv('%s_RESULT.csv' %file_name.rstrip(), index=False)
     return
-
 
 def transfrom_single_file(file_name):
     print u"計算每一度的平均半徑..."
@@ -329,7 +328,6 @@ def transfrom_single_file(file_name):
     sorted_df.to_csv('%s_ANSWER.csv' %new_fn.rstrip(), index=False)
     print u"_ANSWER.CSV 產出."
     return
-
 
 def plot_or_not(file_name):
     answer_data = pd.read_csv(file_name.rstrip())
@@ -391,6 +389,40 @@ def plot_replacement(file_name):
 
     plt.show()
 
+#====== test code =====
+def test_multi_center(file_name): # 讀取 純點雲資料 產出 圓心檔案 _CENTER
+    print u"計算擬合圓心開始."
+    ori_f = pd.read_excel(file_name, header=None)
+    new_df = pd.DataFrame({"lidar_e": ori_f[0],"lidar_n": ori_f[1],"lidar_z": ori_f[2]})
+
+    new_df_lenth = new_df["lidar_e"].size
+
+    if new_df_lenth >= 100000:
+        fit_len = 100000
+    else:
+        fit_len = new_df_lenth
+
+
+    test_count = 10000
+    center_df = pd.DataFrame({'tunnel_e': 0.0, 'tunnel_n':0.0, 'tunnel_z': 0.0}, index=[i for i in range(test_count)])
+    for i in range(test_count):
+        # 取全部裡面指定數量的隨機點雲
+        lidar_for_fit = new_df.sample(n=fit_len)
+        tunnel_z = lidar_for_fit['lidar_z'].mean()
+
+
+        print u"計算擬合圓心中..."
+        xc,yc,R,residu  = circle_fit(lidar_for_fit['lidar_e'], lidar_for_fit['lidar_n'])
+
+        center_df["tunnel_e"][i] = xc
+        center_df["tunnel_n"][i] = yc
+        center_df["tunnel_z"][i] = tunnel_z
+        print u"第%s次擬合圓心計算完成." %(i)
+        #all_df = pd.concat([new_df,center_df], axis=1)
+
+    print center_df.head(5)
+
+
 
 #===== main =====
 def main():
@@ -403,6 +435,9 @@ def main():
 
         if read_input_file == "pp":
             STATUS_KEY = 6
+            break
+        elif read_input_file == "test":
+            STATUS_KEY = 666
             break
 
         elif os.path.isfile(read_input_file) and str(read_input_file).rstrip().endswith(".xlsx"):
@@ -454,6 +489,13 @@ def main():
             print u"檔案錯誤，處罰你等待 3 秒，好好思考人生吧！"
             sleep(3)
         '''
+
+    elif STATUS_KEY ==666:
+        print u"測試模式開啟"
+        test_multi_center("data/179.75-1212.xlsx")
+
+
+
     else:
         print u"執行錯誤, 請重新輸入."
 
